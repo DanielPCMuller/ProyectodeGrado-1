@@ -42,7 +42,7 @@ Public Class Inicio_Sesion
             Conexion.ConnectionString = "server=remotemysql.com; user=eDvAECFNbE; password='f5BSe5QKdb'; database=eDvAECFNbE"
             Conexion.Open()
         Catch ex As Exception
-            MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Acceder a EmprendeInventarios")
+            MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Acceder a MyEasyManage")
             Close()
         End Try
     End Sub

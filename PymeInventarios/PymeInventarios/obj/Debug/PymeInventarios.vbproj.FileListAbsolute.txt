@@ -18,3 +18,23 @@ C:\Users\Daniel PC\Documents\Visual Studio 2015\Projects\PymeInventarios\PymeInv
 C:\Users\Daniel PC\Documents\Visual Studio 2015\Projects\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.pdb
 C:\Users\Daniel PC\Documents\Visual Studio 2015\Projects\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Pedidos.resources
 C:\Users\Daniel PC\Documents\Visual Studio 2015\Projects\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.vbprojResolveAssemblyReference.cache
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.exe
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.xml
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.pdb
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\PymeInventarios.exe
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\PymeInventarios.pdb
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\PymeInventarios.xml
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\mysql.data.dll
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.vbprojResolveAssemblyReference.cache
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.CargaSistema.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Clientes.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Consulta_Inventarios.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Inicio_Sesion.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Inventario.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Modificar_Inventario.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Resources.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Nuevo_Usuario.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Panel_de_Control.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Pedidos.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Ventas.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.vbproj.GenerateResource.Cache
