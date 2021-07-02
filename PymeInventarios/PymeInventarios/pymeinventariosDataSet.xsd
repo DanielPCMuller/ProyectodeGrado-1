@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="pymeinventariosDataSet" targetNamespace="http://tempuri.org/pymeinventariosDataSet.xsd" xmlns:mstns="http://tempuri.org/pymeinventariosDataSet.xsd" xmlns="http://tempuri.org/pymeinventariosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="pymeinventariosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="pymeinventariosConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PymeInventarios.My.MySettings.GlobalReference.Default.pymeinventariosConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="inventariosTableAdapter" GeneratorDataComponentClassName="inventariosTableAdapter" Name="inventarios" UserDataComponentName="inventariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="pymeinventariosConnectionString (MySettings)" DbObjectName="pymeinventarios.inventarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Nombre_Articulo` FROM `inventarios`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="pymeinventariosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="pymeinventariosDataSet" msprop:Generator_UserDSName="pymeinventariosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="inventarios" msprop:Generator_TableClassName="inventariosDataTable" msprop:Generator_TableVarName="tableinventarios" msprop:Generator_TablePropName="inventarios" msprop:Generator_RowDeletingName="inventariosRowDeleting" msprop:Generator_RowChangingName="inventariosRowChanging" msprop:Generator_RowEvHandlerName="inventariosRowChangeEventHandler" msprop:Generator_RowDeletedName="inventariosRowDeleted" msprop:Generator_UserTableName="inventarios" msprop:Generator_RowChangedName="inventariosRowChanged" msprop:Generator_RowEvArgName="inventariosRowChangeEvent" msprop:Generator_RowClassName="inventariosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
