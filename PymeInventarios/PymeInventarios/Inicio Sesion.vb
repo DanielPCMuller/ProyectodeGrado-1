@@ -34,7 +34,7 @@ Public Class Inicio_Sesion
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Close()
+        End
     End Sub
 
     Private Sub Inicio_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
