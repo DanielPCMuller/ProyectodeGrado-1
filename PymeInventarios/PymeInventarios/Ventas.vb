@@ -11,6 +11,10 @@ Public Class Ventas
         CBO1.Text = ""
         TXT2.Text = ""
         TXT3.Text = ""
+        TXT7.Text = ""
+        LST2.Items.Clear()
+        LST3.Items.Clear()
+        LST5.Items.Clear()
     End Sub
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -40,12 +44,21 @@ Public Class Ventas
     End Sub
 
     Private Sub Borrar_Click(sender As Object, e As EventArgs) Handles Borrar.Click
-        TXT6.Text = ""
+        If (LST2.SelectedIndex > -1) Then
+            LST2.Items.RemoveAt(LST2.SelectedIndex)
+            TXT7.Text = ""
+        End If
+
+        If (LST3.SelectedIndex > -1) Then
+            LST3.Items.RemoveAt(LST3.SelectedIndex)
+            TXT7.Text = ""
+        End If
+
+        If (LST5.SelectedIndex > -1) Then
+            LST5.Items.RemoveAt(LST5.SelectedIndex)
+            TXT7.Text = ""
+        End If
         TXT7.Text = ""
-        LST2.Text = ""
-        LST3.Text = ""
-        LST4.Text = ""
-        LST5.Text = ""
     End Sub
 
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
@@ -55,38 +68,63 @@ Public Class Ventas
 
     Private Sub Agregar_Click(sender As Object, e As EventArgs) Handles Agregar.Click
 
+        Dim Multiplicacion As Long
+        Dim Resultado As Integer
+
         If (TXT6.Text = "") Then
             MsgBox("Ingrese la Cantidad")
             TXT6.Focus()
+            Return
         End If
-        LST2.Items.Add(CBO2.SelectedValue)
+
+        LST2.Items.Add(CBO2.Text)
         LST3.Items.Add(TXT6.Text)
-        LST4.Items.Add(CBO3.SelectedValue)
+
+        Multiplicacion = CBO3.Text * TXT6.Text
+        Resultado = Multiplicacion
+        LST5.Items.Add(Resultado)
 
 
-
-
-
+        TXT6.Text = ""
+        CBO2.Text = ""
+        CBO3.Text = ""
     End Sub
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
-        Try
-            Proceso = New MySqlCommand("Insert Into Facturacion(Fecha_Factura, Numero_Factura, Nombre_Cliente, Tipo_Identificacion, Numero_Identificacion)" & Chr(13) & "Values(@Fecha_Factura, @Numero_Factura, @Nombre_Cliente, @Tipo_Identificacion, @Numero_Identificacion)", Conexion)
-            Proceso.Parameters.AddWithValue("@Fecha_Factura", TXT1.Text)
-            Proceso.Parameters.AddWithValue("@Numero_Factura", TXT8.Text)
-            Proceso.Parameters.AddWithValue("@Nombre_Cliente", TXT3.Text)
-            Proceso.Parameters.AddWithValue("@Tipo_Identificacion", CBO1.Text)
-            Proceso.Parameters.AddWithValue("@Numero_Identificacion", TXT2.Text)
-            Proceso.ExecuteNonQuery()
-            TXT1.Focus()
-            MsgBox("Datos Registrados")
-        Catch ex As Exception
-            MsgBox("Error al Registrar los Datos")
-        End Try
+
+        Dim Total As Integer
+
+        If CBO1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Then
+            MsgBox("Ingrese Datos en los Campos Solicitados")
+            CBO1.Focus()
+        End If
+
+        For Each item As Object In LST5.Items
+            Total = Total + Convert.ToDouble(item)
+            TXT7.Text = Total.ToString()
+        Next
+
+        'Try
+        ' Proceso = New MySqlCommand("Insert Into Facturacion(Fecha_Factura, Numero_Factura, Nombre_Cliente, Tipo_Identificacion, Numero_Identificacion)" & Chr(13) & "Values(@Fecha_Factura, @Numero_Factura, @Nombre_Cliente, @Tipo_Identificacion, @Numero_Identificacion)", Conexion)
+        'Proceso.Parameters.AddWithValue("@Fecha_Factura", TXT1.Text)
+        'Proceso.Parameters.AddWithValue("@Numero_Factura", TXT8.Text)
+        'Proceso.Parameters.AddWithValue("@Nombre_Cliente", TXT3.Text)
+        'Proceso.Parameters.AddWithValue("@Tipo_Identificacion", CBO1.Text)
+        'Proceso.Parameters.AddWithValue("@Numero_Identificacion", TXT2.Text)
+        'Proceso.ExecuteNonQuery()
+        'TXT1.Focus()
+        'MsgBox("Datos Registrados")
+        'Catch ex As Exception
+        'MsgBox("Error al Registrar los Datos")
+        'End Try
 
     End Sub
 
     Private Sub CBO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub LST3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LST3.SelectedIndexChanged
 
     End Sub
 End Class
