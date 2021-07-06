@@ -105,7 +105,7 @@ Partial Class Modificar_Inventario
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(102, 34)
         Me.Button3.TabIndex = 73
-        Me.Button3.Text = "Menú Principal"
+        Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label7

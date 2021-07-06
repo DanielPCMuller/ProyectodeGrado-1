@@ -1,6 +1,6 @@
 ﻿Public Class Modificar_Inventario
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Panel_de_Control.Show()
+        Consulta_Inventarios.Show()
         Close()
     End Sub
 
