@@ -302,7 +302,6 @@ Partial Class Inventario
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXT1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Location = New System.Drawing.Point(298, 437)
         Me.Name = "Inventario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
