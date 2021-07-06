@@ -150,7 +150,7 @@ Partial Class Consulta_Inventarios
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(122, 55)
         Me.Button4.TabIndex = 69
-        Me.Button4.Text = "Modificar Inventario"
+        Me.Button4.Text = "Actualizar Inventario"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Consulta_Inventarios

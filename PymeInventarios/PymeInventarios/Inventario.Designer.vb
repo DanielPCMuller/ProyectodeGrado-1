@@ -53,9 +53,9 @@ Partial Class Inventario
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(93, 455)
+        Me.Button3.Location = New System.Drawing.Point(302, 435)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(91, 34)
+        Me.Button3.Size = New System.Drawing.Size(107, 34)
         Me.Button3.TabIndex = 50
         Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
@@ -64,7 +64,7 @@ Partial Class Inventario
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(34, 299)
+        Me.Label7.Location = New System.Drawing.Point(118, 316)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(85, 13)
         Me.Label7.TabIndex = 49
@@ -72,16 +72,16 @@ Partial Class Inventario
         '
         'TXT5
         '
-        Me.TXT5.Location = New System.Drawing.Point(150, 296)
+        Me.TXT5.Location = New System.Drawing.Point(234, 313)
         Me.TXT5.Name = "TXT5"
-        Me.TXT5.Size = New System.Drawing.Size(100, 20)
+        Me.TXT5.Size = New System.Drawing.Size(134, 20)
         Me.TXT5.TabIndex = 48
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(36, 273)
+        Me.Label6.Location = New System.Drawing.Point(120, 290)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 47
@@ -89,16 +89,16 @@ Partial Class Inventario
         '
         'TXT4
         '
-        Me.TXT4.Location = New System.Drawing.Point(150, 270)
+        Me.TXT4.Location = New System.Drawing.Point(234, 287)
         Me.TXT4.Name = "TXT4"
-        Me.TXT4.Size = New System.Drawing.Size(100, 20)
+        Me.TXT4.Size = New System.Drawing.Size(134, 20)
         Me.TXT4.TabIndex = 46
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(34, 168)
+        Me.Label5.Location = New System.Drawing.Point(118, 185)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(101, 13)
         Me.Label5.TabIndex = 45
@@ -106,16 +106,16 @@ Partial Class Inventario
         '
         'TXT3
         '
-        Me.TXT3.Location = New System.Drawing.Point(150, 218)
+        Me.TXT3.Location = New System.Drawing.Point(234, 235)
         Me.TXT3.Name = "TXT3"
-        Me.TXT3.Size = New System.Drawing.Size(100, 20)
+        Me.TXT3.Size = New System.Drawing.Size(134, 20)
         Me.TXT3.TabIndex = 44
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(36, 247)
+        Me.Label4.Location = New System.Drawing.Point(120, 264)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 13)
         Me.Label4.TabIndex = 43
@@ -123,16 +123,16 @@ Partial Class Inventario
         '
         'TXT2
         '
-        Me.TXT2.Location = New System.Drawing.Point(150, 165)
+        Me.TXT2.Location = New System.Drawing.Point(234, 182)
         Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(100, 20)
+        Me.TXT2.Size = New System.Drawing.Size(134, 20)
         Me.TXT2.TabIndex = 42
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(140, 413)
+        Me.Button2.Location = New System.Drawing.Point(189, 435)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(91, 36)
+        Me.Button2.Size = New System.Drawing.Size(107, 36)
         Me.Button2.TabIndex = 41
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -140,9 +140,9 @@ Partial Class Inventario
         'TXT6
         '
         Me.TXT6.Enabled = False
-        Me.TXT6.Location = New System.Drawing.Point(150, 350)
+        Me.TXT6.Location = New System.Drawing.Point(234, 367)
         Me.TXT6.Name = "TXT6"
-        Me.TXT6.Size = New System.Drawing.Size(100, 20)
+        Me.TXT6.Size = New System.Drawing.Size(134, 20)
         Me.TXT6.TabIndex = 40
         '
         'Label3
@@ -150,7 +150,7 @@ Partial Class Inventario
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(109, 109)
+        Me.Label3.Location = New System.Drawing.Point(193, 126)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 16)
         Me.Label3.TabIndex = 39
@@ -160,7 +160,7 @@ Partial Class Inventario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(34, 142)
+        Me.Label2.Location = New System.Drawing.Point(118, 159)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 13)
         Me.Label2.TabIndex = 38
@@ -169,7 +169,7 @@ Partial Class Inventario
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(79, 6)
+        Me.PictureBox1.Location = New System.Drawing.Point(163, 23)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(132, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -178,18 +178,18 @@ Partial Class Inventario
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(40, 413)
+        Me.Button1.Location = New System.Drawing.Point(76, 435)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(92, 36)
+        Me.Button1.Size = New System.Drawing.Size(107, 36)
         Me.Button1.TabIndex = 36
-        Me.Button1.Text = "Insertar y  Guardar"
+        Me.Button1.Text = "Insertar y Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 353)
+        Me.Label1.Location = New System.Drawing.Point(119, 370)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 35
@@ -197,16 +197,16 @@ Partial Class Inventario
         '
         'TXT1
         '
-        Me.TXT1.Location = New System.Drawing.Point(150, 139)
+        Me.TXT1.Location = New System.Drawing.Point(234, 156)
         Me.TXT1.Name = "TXT1"
-        Me.TXT1.Size = New System.Drawing.Size(100, 20)
+        Me.TXT1.Size = New System.Drawing.Size(134, 20)
         Me.TXT1.TabIndex = 34
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(35, 221)
+        Me.Label8.Location = New System.Drawing.Point(119, 238)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(84, 13)
         Me.Label8.TabIndex = 52
@@ -214,16 +214,16 @@ Partial Class Inventario
         '
         'TXT7
         '
-        Me.TXT7.Location = New System.Drawing.Point(150, 244)
+        Me.TXT7.Location = New System.Drawing.Point(234, 261)
         Me.TXT7.Name = "TXT7"
-        Me.TXT7.Size = New System.Drawing.Size(100, 20)
+        Me.TXT7.Size = New System.Drawing.Size(134, 20)
         Me.TXT7.TabIndex = 51
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(35, 194)
+        Me.Label9.Location = New System.Drawing.Point(119, 211)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 13)
         Me.Label9.TabIndex = 54
@@ -231,24 +231,24 @@ Partial Class Inventario
         '
         'TXT8
         '
-        Me.TXT8.Location = New System.Drawing.Point(150, 191)
+        Me.TXT8.Location = New System.Drawing.Point(234, 208)
         Me.TXT8.Name = "TXT8"
-        Me.TXT8.Size = New System.Drawing.Size(100, 20)
+        Me.TXT8.Size = New System.Drawing.Size(134, 20)
         Me.TXT8.TabIndex = 53
         '
         'TXT9
         '
         Me.TXT9.Enabled = False
-        Me.TXT9.Location = New System.Drawing.Point(150, 376)
+        Me.TXT9.Location = New System.Drawing.Point(234, 393)
         Me.TXT9.Name = "TXT9"
-        Me.TXT9.Size = New System.Drawing.Size(100, 20)
+        Me.TXT9.Size = New System.Drawing.Size(134, 20)
         Me.TXT9.TabIndex = 56
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(36, 379)
+        Me.Label10.Location = New System.Drawing.Point(120, 396)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(51, 13)
         Me.Label10.TabIndex = 55
@@ -256,16 +256,16 @@ Partial Class Inventario
         '
         'TXT10
         '
-        Me.TXT10.Location = New System.Drawing.Point(150, 322)
+        Me.TXT10.Location = New System.Drawing.Point(234, 339)
         Me.TXT10.Name = "TXT10"
-        Me.TXT10.Size = New System.Drawing.Size(100, 20)
+        Me.TXT10.Size = New System.Drawing.Size(134, 20)
         Me.TXT10.TabIndex = 58
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(34, 325)
+        Me.Label11.Location = New System.Drawing.Point(118, 342)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(107, 13)
         Me.Label11.TabIndex = 57
@@ -275,7 +275,7 @@ Partial Class Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 491)
+        Me.ClientSize = New System.Drawing.Size(479, 485)
         Me.Controls.Add(Me.TXT10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TXT9)
@@ -302,6 +302,7 @@ Partial Class Inventario
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXT1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Location = New System.Drawing.Point(298, 437)
         Me.Name = "Inventario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
