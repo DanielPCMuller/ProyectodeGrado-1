@@ -38,3 +38,4 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Pedidos.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Ventas.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.vbproj.GenerateResource.Cache
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Acerca_de.resources

@@ -34,6 +34,10 @@ Partial Class Panel_de_Control
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AcercaDeMyEasyManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -41,7 +45,7 @@ Partial Class Panel_de_Control
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label1.Location = New System.Drawing.Point(257, 47)
+        Me.Label1.Location = New System.Drawing.Point(253, 76)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(123, 16)
         Me.Label1.TabIndex = 0
@@ -52,7 +56,7 @@ Partial Class Panel_de_Control
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(223, 31)
+        Me.Label2.Location = New System.Drawing.Point(219, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(214, 16)
         Me.Label2.TabIndex = 1
@@ -65,7 +69,7 @@ Partial Class Panel_de_Control
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(43, 81)
+        Me.Button1.Location = New System.Drawing.Point(31, 107)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(130, 84)
         Me.Button1.TabIndex = 2
@@ -79,7 +83,7 @@ Partial Class Panel_de_Control
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(315, 81)
+        Me.Button2.Location = New System.Drawing.Point(303, 107)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(130, 84)
         Me.Button2.TabIndex = 3
@@ -93,9 +97,9 @@ Partial Class Panel_de_Control
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button3.Location = New System.Drawing.Point(504, 12)
+        Me.Button3.Location = New System.Drawing.Point(504, 36)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(91, 57)
+        Me.Button3.Size = New System.Drawing.Size(91, 65)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Cerrar Sesión"
         Me.Button3.UseVisualStyleBackColor = False
@@ -107,7 +111,7 @@ Partial Class Panel_de_Control
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(179, 81)
+        Me.Button4.Location = New System.Drawing.Point(167, 107)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(130, 84)
         Me.Button4.TabIndex = 5
@@ -121,7 +125,7 @@ Partial Class Panel_de_Control
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(451, 81)
+        Me.Button5.Location = New System.Drawing.Point(439, 107)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(130, 84)
         Me.Button5.TabIndex = 6
@@ -135,7 +139,7 @@ Partial Class Panel_de_Control
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(43, 171)
+        Me.Button6.Location = New System.Drawing.Point(31, 197)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(130, 84)
         Me.Button6.TabIndex = 7
@@ -149,7 +153,7 @@ Partial Class Panel_de_Control
         Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(179, 171)
+        Me.Button7.Location = New System.Drawing.Point(167, 197)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 84)
         Me.Button7.TabIndex = 8
@@ -163,7 +167,7 @@ Partial Class Panel_de_Control
         Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(315, 171)
+        Me.Button8.Location = New System.Drawing.Point(303, 197)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(130, 84)
         Me.Button8.TabIndex = 9
@@ -177,19 +181,42 @@ Partial Class Panel_de_Control
         Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Location = New System.Drawing.Point(451, 171)
+        Me.Button9.Location = New System.Drawing.Point(439, 197)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(130, 84)
         Me.Button9.TabIndex = 10
         Me.Button9.Text = "Clientes"
         Me.Button9.UseVisualStyleBackColor = False
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(607, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'AyudaToolStripMenuItem
+        '
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeMyEasyManageToolStripMenuItem})
+        Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.AyudaToolStripMenuItem.Text = "Ayuda"
+        '
+        'AcercaDeMyEasyManageToolStripMenuItem
+        '
+        Me.AcercaDeMyEasyManageToolStripMenuItem.Name = "AcercaDeMyEasyManageToolStripMenuItem"
+        Me.AcercaDeMyEasyManageToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.AcercaDeMyEasyManageToolStripMenuItem.Text = "Acerca de MyEasyManage"
+        '
         'Panel_de_Control
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(607, 272)
+        Me.ClientSize = New System.Drawing.Size(607, 299)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
@@ -201,10 +228,14 @@ Partial Class Panel_de_Control
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Panel_de_Control"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Panel_de_Control"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -221,4 +252,7 @@ Partial Class Panel_de_Control
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AcercaDeMyEasyManageToolStripMenuItem As ToolStripMenuItem
 End Class

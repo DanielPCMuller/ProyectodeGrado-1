@@ -43,4 +43,8 @@
         Clientes.Show()
     End Sub
 
+    Private Sub AcercaDeMyEasyManageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeMyEasyManageToolStripMenuItem.Click
+        Close()
+        Acerca_de.Show()
+    End Sub
 End Class
