@@ -127,4 +127,13 @@ Public Class Ventas
     Private Sub LST3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LST3.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        PrintForm1.Print()
+        Timer1.Stop()
+    End Sub
+
+    Private Sub ImprimirReciboToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirReciboToolStripMenuItem.Click
+        Timer1.Start()
+    End Sub
 End Class
