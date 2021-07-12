@@ -46,4 +46,9 @@ Public Class Inicio_Sesion
             Close()
         End Try
     End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Close()
+        Recuperar_Clave.Show()
+    End Sub
 End Class
