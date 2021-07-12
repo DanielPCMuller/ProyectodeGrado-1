@@ -96,6 +96,12 @@
     <Compile Include="Consulta Inventarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Eliminar Productos.Designer.vb">
+      <DependentUpon>Eliminar Productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio Sesion.Designer.vb">
       <DependentUpon>Inicio Sesion.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta Inventarios.resx">
       <DependentUpon>Consulta Inventarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Productos.resx">
+      <DependentUpon>Eliminar Productos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio Sesion.resx">
       <DependentUpon>Inicio Sesion.vb</DependentUpon>
