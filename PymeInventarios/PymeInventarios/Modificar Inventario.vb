@@ -44,7 +44,7 @@ Public Class Modificar_Inventario
 
     Private Sub Modificar_Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Conexion.ConnectionString = "server=remotemysql.com; user=eDvAECFNbE; password='f5BSe5QKdb'; database=eDvAECFNbE"
+            Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
             MsgBox("Conexión Exitosa Con Base de Datos")
         Catch ex As Exception
