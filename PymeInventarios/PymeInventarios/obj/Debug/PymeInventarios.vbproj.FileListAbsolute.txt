@@ -44,3 +44,5 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Recuperar_Clave.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Ordenes.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Consultar_Orden.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Egresos.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Consultar_Egresos.resources

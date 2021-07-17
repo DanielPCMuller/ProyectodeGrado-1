@@ -34,3 +34,12 @@ Nombres_Cliente varchar (50),
 Apellidos_Cliente varchar (50),
 Telefono varchar (50)
 );
+
+create table egresos(
+Factura_Numero varchar (50) primary key,
+Tipo_Pago varchar (50),
+Beneficiario_Pago varchar (50),
+Fecha_Pago varchar (50),
+Concepto varchar (50),
+Valor_Pago varchar (50)
+);

@@ -47,4 +47,9 @@
         Close()
         Acerca_de.Show()
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Close()
+        Egresos.Show()
+    End Sub
 End Class

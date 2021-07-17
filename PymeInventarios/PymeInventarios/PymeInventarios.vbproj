@@ -97,10 +97,22 @@
     <Compile Include="Consulta Inventarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultar Egresos.Designer.vb">
+      <DependentUpon>Consultar Egresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar Egresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultar Orden.Designer.vb">
       <DependentUpon>Consultar Orden.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultar Orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Egresos.Designer.vb">
+      <DependentUpon>Egresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Egresos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eliminar Productos.Designer.vb">
@@ -186,8 +198,14 @@
     <EmbeddedResource Include="Consulta Inventarios.resx">
       <DependentUpon>Consulta Inventarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultar Egresos.resx">
+      <DependentUpon>Consultar Egresos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultar Orden.resx">
       <DependentUpon>Consultar Orden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Egresos.resx">
+      <DependentUpon>Egresos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar Productos.resx">
       <DependentUpon>Eliminar Productos.vb</DependentUpon>
