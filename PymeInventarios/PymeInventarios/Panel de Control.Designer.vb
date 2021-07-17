@@ -29,7 +29,6 @@ Partial Class Panel_de_Control
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -97,9 +96,9 @@ Partial Class Panel_de_Control
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button3.Location = New System.Drawing.Point(504, 36)
+        Me.Button3.Location = New System.Drawing.Point(439, 107)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(91, 65)
+        Me.Button3.Size = New System.Drawing.Size(130, 84)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Cerrar Sesión"
         Me.Button3.UseVisualStyleBackColor = False
@@ -117,20 +116,6 @@ Partial Class Panel_de_Control
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "Consulta de Inventario"
         Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.SeaGreen
-        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(439, 107)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(130, 84)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "Historial de Transacciones"
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -221,7 +206,6 @@ Partial Class Panel_de_Control
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -247,7 +231,6 @@ Partial Class Panel_de_Control
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
