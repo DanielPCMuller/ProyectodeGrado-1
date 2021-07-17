@@ -62,6 +62,11 @@ Partial Class Ventas
         Me.ImprimirReciboToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TXT9 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TXT10 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -215,11 +220,14 @@ Partial Class Ventas
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.TXT10)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.TXT9)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.LST5)
         Me.GroupBox1.Controls.Add(Me.LST3)
         Me.GroupBox1.Controls.Add(Me.LST2)
-        Me.GroupBox1.Controls.Add(Me.TXT7)
-        Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label14)
@@ -256,7 +264,7 @@ Partial Class Ventas
         'TXT7
         '
         Me.TXT7.Enabled = False
-        Me.TXT7.Location = New System.Drawing.Point(430, 221)
+        Me.TXT7.Location = New System.Drawing.Point(597, 536)
         Me.TXT7.Name = "TXT7"
         Me.TXT7.Size = New System.Drawing.Size(120, 20)
         Me.TXT7.TabIndex = 29
@@ -266,7 +274,7 @@ Partial Class Ventas
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(337, 225)
+        Me.Label17.Location = New System.Drawing.Point(504, 540)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(87, 16)
         Me.Label17.TabIndex = 38
@@ -426,6 +434,52 @@ Partial Class Ventas
         '
         Me.Timer1.Interval = 1000
         '
+        'TXT9
+        '
+        Me.TXT9.Enabled = False
+        Me.TXT9.Location = New System.Drawing.Point(363, 227)
+        Me.TXT9.Name = "TXT9"
+        Me.TXT9.Size = New System.Drawing.Size(120, 20)
+        Me.TXT9.TabIndex = 49
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(292, 231)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 16)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "Cambio $"
+        '
+        'TXT10
+        '
+        Me.TXT10.Location = New System.Drawing.Point(151, 227)
+        Me.TXT10.Name = "TXT10"
+        Me.TXT10.Size = New System.Drawing.Size(120, 20)
+        Me.TXT10.TabIndex = 51
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(32, 231)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(113, 16)
+        Me.Label15.TabIndex = 52
+        Me.Label15.Text = "Monto Recibido $"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(557, 100)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(145, 32)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "Sumar Artículos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -438,6 +492,8 @@ Partial Class Ventas
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Agregar)
         Me.Controls.Add(Me.Salir)
+        Me.Controls.Add(Me.TXT7)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Borrar)
         Me.Controls.Add(Me.Calcular)
         Me.Controls.Add(Me.GroupBox1)
@@ -508,4 +564,9 @@ Partial Class Ventas
     Friend WithEvents ImprimirReciboToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents TXT10 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TXT9 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

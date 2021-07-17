@@ -6,12 +6,17 @@ Public Class Ventas
     Dim Datos As New DataSet
     Dim Num_Factura As Integer
     Dim Item As Integer
+    Dim Total As Integer
+    Dim Cambio As Integer
+    Dim MontoRecibido As Integer
 
     Private Sub BorrarCliente_Click(sender As Object, e As EventArgs) Handles BorrarCliente.Click
         CBO1.Text = ""
         TXT2.Text = ""
         TXT3.Text = ""
         TXT7.Text = ""
+        TXT9.Text = ""
+        TXT10.Text = ""
         LST2.Items.Clear()
         LST3.Items.Clear()
         LST5.Items.Clear()
@@ -84,25 +89,26 @@ Public Class Ventas
         Resultado = Multiplicacion
         LST5.Items.Add(Resultado)
 
-
         TXT6.Text = ""
         CBO2.Text = ""
         CBO3.Text = ""
+
+
     End Sub
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
 
-        Dim Total As Integer
-
-        If CBO1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Then
+        If CBO1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Or TXT10.Text = "" Then
             MsgBox("Ingrese Datos en los Campos Solicitados")
             CBO1.Focus()
         End If
 
-        For Each item As Object In LST5.Items
-            Total = Total + Convert.ToDouble(item)
-            TXT7.Text = Total.ToString()
-        Next
+        MontoRecibido = TXT10.Text
+        Cambio = MontoRecibido - Total
+        TXT9.Text = Cambio.ToString()
+
+
+
 
         'Try
         ' Proceso = New MySqlCommand("Insert Into Facturacion(Fecha_Factura, Numero_Factura, Nombre_Cliente, Tipo_Identificacion, Numero_Identificacion)" & Chr(13) & "Values(@Fecha_Factura, @Numero_Factura, @Nombre_Cliente, @Tipo_Identificacion, @Numero_Identificacion)", Conexion)
@@ -135,5 +141,16 @@ Public Class Ventas
 
     Private Sub ImprimirReciboToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirReciboToolStripMenuItem.Click
         Timer1.Start()
+    End Sub
+
+    Private Sub TXT7_TextChanged(sender As Object, e As EventArgs) Handles TXT7.TextChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        For Each item As Object In LST5.Items
+            Total = Total + Convert.ToDouble(item)
+            TXT7.Text = Total.ToString()
+        Next
     End Sub
 End Class
