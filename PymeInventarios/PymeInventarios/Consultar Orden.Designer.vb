@@ -151,7 +151,9 @@ Partial Class Consultar_Orden
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Consultar_Orden"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar_Orden"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
