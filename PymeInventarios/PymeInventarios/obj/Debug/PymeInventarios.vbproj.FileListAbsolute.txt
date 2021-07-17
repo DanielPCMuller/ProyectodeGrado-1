@@ -35,7 +35,6 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Resources.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Nuevo_Usuario.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Panel_de_Control.resources
-C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Pedidos.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Ventas.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.vbproj.GenerateResource.Cache
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Acerca_de.resources
@@ -43,3 +42,5 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Recuperar_Clave.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Ordenes.resources
+C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\PymeInventarios.Consultar_Orden.resources

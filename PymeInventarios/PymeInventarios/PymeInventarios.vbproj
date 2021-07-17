@@ -97,6 +97,12 @@
     <Compile Include="Consulta Inventarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultar Orden.Designer.vb">
+      <DependentUpon>Consultar Orden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar Orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Eliminar Productos.Designer.vb">
       <DependentUpon>Eliminar Productos.vb</DependentUpon>
     </Compile>
@@ -142,16 +148,16 @@
     <Compile Include="Nuevo Usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ordenes.Designer.vb">
+      <DependentUpon>Ordenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Panel de Control.Designer.vb">
       <DependentUpon>Panel de Control.vb</DependentUpon>
     </Compile>
     <Compile Include="Panel de Control.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pedidos.Designer.vb">
-      <DependentUpon>Pedidos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pedidos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Recuperar Clave.Designer.vb">
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="Consulta Inventarios.resx">
       <DependentUpon>Consulta Inventarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultar Orden.resx">
+      <DependentUpon>Consultar Orden.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eliminar Productos.resx">
       <DependentUpon>Eliminar Productos.vb</DependentUpon>
     </EmbeddedResource>
@@ -201,11 +210,11 @@
     <EmbeddedResource Include="Nuevo Usuario.resx">
       <DependentUpon>Nuevo Usuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ordenes.resx">
+      <DependentUpon>Ordenes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel de Control.resx">
       <DependentUpon>Panel de Control.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recuperar Clave.resx">
       <DependentUpon>Recuperar Clave.vb</DependentUpon>

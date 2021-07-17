@@ -36,10 +36,10 @@ Partial Class Nuevo_Usuario
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXT3 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TXT4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TXT5 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,13 +161,6 @@ Partial Class Nuevo_Usuario
         Me.Label6.TabIndex = 30
         Me.Label6.Text = "Fecha de Nacimiento"
         '
-        'TXT4
-        '
-        Me.TXT4.Location = New System.Drawing.Point(153, 234)
-        Me.TXT4.Name = "TXT4"
-        Me.TXT4.Size = New System.Drawing.Size(100, 20)
-        Me.TXT4.TabIndex = 29
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -194,16 +187,28 @@ Partial Class Nuevo_Usuario
         Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = ""
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 234)
+        Me.DateTimePicker1.MinDate = New Date(1901, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(102, 20)
+        Me.DateTimePicker1.TabIndex = 119
+        Me.DateTimePicker1.Value = New Date(2021, 7, 17, 0, 0, 0, 0)
+        '
         'Nuevo_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 396)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TXT5)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TXT4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TXT3)
         Me.Controls.Add(Me.Label4)
@@ -239,8 +244,8 @@ Partial Class Nuevo_Usuario
     Friend WithEvents Label5 As Label
     Friend WithEvents TXT3 As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TXT4 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents TXT5 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

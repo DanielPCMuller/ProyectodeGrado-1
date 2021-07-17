@@ -6,7 +6,6 @@ Public Class Nuevo_Usuario
         TXT1.Text = ""
         TXT2.Text = ""
         TXT3.Text = ""
-        TXT4.Text = ""
         TXT5.Text = ""
         TXT6.Text = ""
     End Sub
@@ -33,7 +32,7 @@ Public Class Nuevo_Usuario
             Proceso.Parameters.AddWithValue("@Identificacion", TXT1.Text)
             Proceso.Parameters.AddWithValue("@Nombres_Persona", TXT2.Text)
             Proceso.Parameters.AddWithValue("@Apellidos_Persona", TXT3.Text)
-            Proceso.Parameters.AddWithValue("@Fecha_Nacimiento", TXT4.Text)
+            Proceso.Parameters.AddWithValue("@Fecha_Nacimiento", DateTimePicker1.Text)
             Proceso.Parameters.AddWithValue("@Telefono", TXT5.Text)
             Proceso.Parameters.AddWithValue("@Clave", TXT6.Text)
             Proceso.ExecuteNonQuery()

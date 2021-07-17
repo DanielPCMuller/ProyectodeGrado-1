@@ -14,7 +14,6 @@ Public Class Inventario
         TXT4.Text = ""
         TXT5.Text = ""
         TXT6.Text = ""
-        TXT7.Text = ""
         TXT8.Text = ""
         TXT9.Text = ""
         TXT10.Text = ""
@@ -49,7 +48,7 @@ Public Class Inventario
             TXT6.Text = Precio_Venta
             TXT9.Text = Utilidad
         End If
-        If TXT1.Text & TXT2.Text & TXT3.Text & TXT4.Text & TXT5.Text & TXT6.Text & TXT7.Text & TXT8.Text & TXT9.Text = "" Then
+        If TXT1.Text & TXT2.Text & TXT3.Text & TXT4.Text & TXT5.Text & TXT6.Text & DateTimePicker1.Text & TXT8.Text & TXT9.Text = "" Then
             MsgBox("Inserte Los Datos Requeridos")
         End If
         Try
@@ -58,7 +57,7 @@ Public Class Inventario
             Proceso.Parameters.AddWithValue("@Nombre_Articulo", TXT2.Text)
             Proceso.Parameters.AddWithValue("@Marca_Articulo", TXT8.Text)
             Proceso.Parameters.AddWithValue("@Empresa_Pedido", TXT3.Text)
-            Proceso.Parameters.AddWithValue("@Fecha_Compra", TXT7.Text)
+            Proceso.Parameters.AddWithValue("@Fecha_Compra", DateTimePicker1.Text)
             Proceso.Parameters.AddWithValue("@Cantidad", TXT4.Text)
             Proceso.Parameters.AddWithValue("@Precio_Compra", TXT5.Text)
             Proceso.Parameters.AddWithValue("@Precio_Venta", TXT6.Text)
