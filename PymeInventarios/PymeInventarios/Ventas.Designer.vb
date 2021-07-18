@@ -40,14 +40,19 @@ Partial Class Ventas
         Me.TXT6 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TXT10 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TXT9 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.LST5 = New System.Windows.Forms.ListBox()
         Me.LST3 = New System.Windows.Forms.ListBox()
         Me.LST2 = New System.Windows.Forms.ListBox()
-        Me.TXT7 = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.TXT7 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Calcular = New System.Windows.Forms.Button()
         Me.Borrar = New System.Windows.Forms.Button()
         Me.Salir = New System.Windows.Forms.Button()
@@ -62,11 +67,6 @@ Partial Class Ventas
         Me.ImprimirReciboToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TXT9 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TXT10 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -237,6 +237,52 @@ Partial Class Ventas
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(557, 100)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(145, 32)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "Calcular Venta"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TXT10
+        '
+        Me.TXT10.Location = New System.Drawing.Point(151, 227)
+        Me.TXT10.Name = "TXT10"
+        Me.TXT10.Size = New System.Drawing.Size(120, 20)
+        Me.TXT10.TabIndex = 51
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(32, 231)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(113, 16)
+        Me.Label15.TabIndex = 52
+        Me.Label15.Text = "Monto Recibido $"
+        '
+        'TXT9
+        '
+        Me.TXT9.ForeColor = System.Drawing.Color.Blue
+        Me.TXT9.Location = New System.Drawing.Point(363, 227)
+        Me.TXT9.Name = "TXT9"
+        Me.TXT9.Size = New System.Drawing.Size(120, 20)
+        Me.TXT9.TabIndex = 49
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(292, 231)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 16)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "Cambio $"
+        '
         'LST5
         '
         Me.LST5.FormattingEnabled = True
@@ -260,25 +306,6 @@ Partial Class Ventas
         Me.LST2.Name = "LST2"
         Me.LST2.Size = New System.Drawing.Size(120, 173)
         Me.LST2.TabIndex = 44
-        '
-        'TXT7
-        '
-        Me.TXT7.Enabled = False
-        Me.TXT7.Location = New System.Drawing.Point(597, 536)
-        Me.TXT7.Name = "TXT7"
-        Me.TXT7.Size = New System.Drawing.Size(120, 20)
-        Me.TXT7.TabIndex = 29
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(504, 540)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(87, 16)
-        Me.Label17.TabIndex = 38
-        Me.Label17.Text = "Total Venta $"
         '
         'Label16
         '
@@ -313,18 +340,37 @@ Partial Class Ventas
         Me.Label14.TabIndex = 33
         Me.Label14.Text = "Cantidad"
         '
+        'TXT7
+        '
+        Me.TXT7.ForeColor = System.Drawing.Color.Blue
+        Me.TXT7.Location = New System.Drawing.Point(597, 536)
+        Me.TXT7.Name = "TXT7"
+        Me.TXT7.Size = New System.Drawing.Size(120, 20)
+        Me.TXT7.TabIndex = 29
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Black
+        Me.Label17.Location = New System.Drawing.Point(504, 540)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(87, 16)
+        Me.Label17.TabIndex = 38
+        Me.Label17.Text = "Total Venta $"
+        '
         'Calcular
         '
-        Me.Calcular.Location = New System.Drawing.Point(227, 562)
+        Me.Calcular.Location = New System.Drawing.Point(229, 586)
         Me.Calcular.Name = "Calcular"
         Me.Calcular.Size = New System.Drawing.Size(145, 32)
         Me.Calcular.TabIndex = 19
-        Me.Calcular.Text = "Calcular y Guardar Venta"
+        Me.Calcular.Text = "Guardar Venta"
         Me.Calcular.UseVisualStyleBackColor = True
         '
         'Borrar
         '
-        Me.Borrar.Location = New System.Drawing.Point(375, 562)
+        Me.Borrar.Location = New System.Drawing.Point(377, 586)
         Me.Borrar.Name = "Borrar"
         Me.Borrar.Size = New System.Drawing.Size(145, 32)
         Me.Borrar.TabIndex = 20
@@ -333,7 +379,7 @@ Partial Class Ventas
         '
         'Salir
         '
-        Me.Salir.Location = New System.Drawing.Point(526, 562)
+        Me.Salir.Location = New System.Drawing.Point(528, 586)
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(145, 32)
         Me.Salir.TabIndex = 21
@@ -342,7 +388,7 @@ Partial Class Ventas
         '
         'Agregar
         '
-        Me.Agregar.Location = New System.Drawing.Point(76, 562)
+        Me.Agregar.Location = New System.Drawing.Point(78, 586)
         Me.Agregar.Name = "Agregar"
         Me.Agregar.Size = New System.Drawing.Size(145, 32)
         Me.Agregar.TabIndex = 24
@@ -434,57 +480,11 @@ Partial Class Ventas
         '
         Me.Timer1.Interval = 1000
         '
-        'TXT9
-        '
-        Me.TXT9.Enabled = False
-        Me.TXT9.Location = New System.Drawing.Point(363, 227)
-        Me.TXT9.Name = "TXT9"
-        Me.TXT9.Size = New System.Drawing.Size(120, 20)
-        Me.TXT9.TabIndex = 49
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(292, 231)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 16)
-        Me.Label1.TabIndex = 50
-        Me.Label1.Text = "Cambio $"
-        '
-        'TXT10
-        '
-        Me.TXT10.Location = New System.Drawing.Point(151, 227)
-        Me.TXT10.Name = "TXT10"
-        Me.TXT10.Size = New System.Drawing.Size(120, 20)
-        Me.TXT10.TabIndex = 51
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(32, 231)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(113, 16)
-        Me.Label15.TabIndex = 52
-        Me.Label15.Text = "Monto Recibido $"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(557, 100)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(145, 32)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Sumar Artículos"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 601)
+        Me.ClientSize = New System.Drawing.Size(748, 630)
         Me.Controls.Add(Me.CBO3)
         Me.Controls.Add(Me.CBO2)
         Me.Controls.Add(Me.Label12)

@@ -73,7 +73,7 @@ Public Class Ventas
 
     Private Sub Agregar_Click(sender As Object, e As EventArgs) Handles Agregar.Click
 
-        Dim Multiplicacion As Long
+        Dim Multiplicacion As Integer
         Dim Resultado As Integer
 
         If (TXT6.Text = "") Then
@@ -149,7 +149,7 @@ Public Class Ventas
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         For Each item As Object In LST5.Items
-            Total = Total + Convert.ToDouble(item)
+            Total = Total + Convert.ToInt32(item)
             TXT7.Text = Total.ToString()
         Next
     End Sub
