@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="PymeInventarios.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="MyEasyManage.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="MyEasyManage.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="PymeInventarios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-    <commandLine file="PymeInventarios.exe" parameters="" />
+    <assemblyIdentity name="MyEasyManage" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MyEasyManage.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -82,6 +82,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyEasyManage.exe" size="696832">
+      <assemblyIdentity name="MyEasyManage" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>n2/Tq/9MvaNKtJtHe1ef05nDYec=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="mysql.data.dll" size="307200">
       <assemblyIdentity name="MySql.Data" version="6.0.3.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -90,18 +102,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>n18u7VLwwvx9ahmOp9dZGIoqqEQ=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PymeInventarios.exe" size="666624">
-      <assemblyIdentity name="PymeInventarios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>U7b6botY/vk75FiHK3aK0/grlZA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,6 +114,15 @@
       <dsig:DigestValue>ffOihUpJq0a1H7eHNVvCYckXHHk=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="MyEasyManage.exe.config" size="1723">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lFYIE8EyuegORUwbOuOwuAYAQ7M=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="MyEasyManage.ico" size="162686">
     <hash>
       <dsig:Transforms>
@@ -121,15 +130,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>hHOfWw8Lx1a53J/aQIlsMObTWa8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="PymeInventarios.exe.config" size="1726">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>3sWe/ZOSHm07jzyahYaU8fDazqU=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
