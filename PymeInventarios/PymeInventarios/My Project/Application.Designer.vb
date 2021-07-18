@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.PymeInventarios.CargaSistema
+            Me.MainForm = Global.MyEasyManage.CargaSistema
         End Sub
     End Class
 End Namespace

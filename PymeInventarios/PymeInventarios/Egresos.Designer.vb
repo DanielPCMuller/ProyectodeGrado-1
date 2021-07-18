@@ -204,7 +204,7 @@ Partial Class Egresos
         'CBO1
         '
         Me.CBO1.FormattingEnabled = True
-        Me.CBO1.Items.AddRange(New Object() {"Factura Servicios Públicos", "Órden Compra de Productos", "Deudas Varias", "Deudas Bancarias", ""})
+        Me.CBO1.Items.AddRange(New Object() {"Factura Servicios Públicos", "Órden Compra de Productos", "Deudas Varias", "Deudas Bancarias"})
         Me.CBO1.Location = New System.Drawing.Point(232, 172)
         Me.CBO1.Name = "CBO1"
         Me.CBO1.Size = New System.Drawing.Size(134, 21)

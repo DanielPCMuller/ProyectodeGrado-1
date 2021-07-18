@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Consultar_Egresos
+Partial Class Consultar_Clientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Consultar_Egresos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Consultar_Egresos))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Consultar_Clientes))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -31,87 +31,130 @@ Partial Class Consultar_Egresos
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TXT2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CBO1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(367, 383)
+        Me.Button3.Location = New System.Drawing.Point(371, 422)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
-        Me.Button3.TabIndex = 90
+        Me.Button3.TabIndex = 98
         Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(239, 383)
+        Me.Button2.Location = New System.Drawing.Point(243, 422)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(122, 55)
-        Me.Button2.TabIndex = 89
+        Me.Button2.TabIndex = 97
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(111, 383)
+        Me.Button1.Location = New System.Drawing.Point(115, 422)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 55)
-        Me.Button1.TabIndex = 88
-        Me.Button1.Text = "Buscar Pagos"
+        Me.Button1.TabIndex = 96
+        Me.Button1.Text = "Buscar Clientes"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TXT1
         '
-        Me.TXT1.Location = New System.Drawing.Point(257, 149)
+        Me.TXT1.Location = New System.Drawing.Point(259, 144)
         Me.TXT1.Name = "TXT1"
         Me.TXT1.Size = New System.Drawing.Size(222, 20)
-        Me.TXT1.TabIndex = 85
+        Me.TXT1.TabIndex = 95
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(95, 152)
+        Me.Label1.Location = New System.Drawing.Point(97, 147)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 13)
-        Me.Label1.TabIndex = 84
-        Me.Label1.Text = "Búsqueda Por Entidad de Pago"
+        Me.Label1.Size = New System.Drawing.Size(125, 13)
+        Me.Label1.TabIndex = 94
+        Me.Label1.Text = "Buscar Por Identificación"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 187)
+        Me.DataGridView1.Location = New System.Drawing.Point(28, 231)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(561, 181)
-        Me.DataGridView1.TabIndex = 83
+        Me.DataGridView1.TabIndex = 93
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(254, 120)
+        Me.Label3.Location = New System.Drawing.Point(261, 115)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 16)
-        Me.Label3.TabIndex = 82
-        Me.Label3.Text = "Consulta de Egresos"
+        Me.Label3.Size = New System.Drawing.Size(130, 16)
+        Me.Label3.TabIndex = 92
+        Me.Label3.Text = "Consulta de Clientes"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(257, 17)
+        Me.PictureBox1.Location = New System.Drawing.Point(259, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(132, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 81
+        Me.PictureBox1.TabIndex = 91
         Me.PictureBox1.TabStop = False
         '
-        'Consultar_Egresos
+        'TXT2
+        '
+        Me.TXT2.Location = New System.Drawing.Point(259, 170)
+        Me.TXT2.Name = "TXT2"
+        Me.TXT2.Size = New System.Drawing.Size(222, 20)
+        Me.TXT2.TabIndex = 100
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(97, 173)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 13)
+        Me.Label2.TabIndex = 99
+        Me.Label2.Text = "Búsqueda Por Apellido"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(97, 199)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 13)
+        Me.Label4.TabIndex = 101
+        Me.Label4.Text = "Búsqueda Por Tipo Documento"
+        '
+        'CBO1
+        '
+        Me.CBO1.FormattingEnabled = True
+        Me.CBO1.Items.AddRange(New Object() {"Cédula de Ciudadanía", "NIT", "Cédula de Extranjería", "Pasaporte"})
+        Me.CBO1.Location = New System.Drawing.Point(259, 196)
+        Me.CBO1.Name = "CBO1"
+        Me.CBO1.Size = New System.Drawing.Size(222, 21)
+        Me.CBO1.TabIndex = 102
+        Me.CBO1.Text = "Seleccione"
+        '
+        'Consultar_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 448)
+        Me.ClientSize = New System.Drawing.Size(601, 483)
+        Me.Controls.Add(Me.CBO1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TXT2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -120,8 +163,10 @@ Partial Class Consultar_Egresos
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Consultar_Egresos"
-        Me.Text = "Consultar_Egresos"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Name = "Consultar_Clientes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Consultar_Clientes"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -137,4 +182,8 @@ Partial Class Consultar_Egresos
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TXT2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents CBO1 As ComboBox
 End Class

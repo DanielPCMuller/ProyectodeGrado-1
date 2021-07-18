@@ -72,7 +72,7 @@ Partial Class Panel_de_Control
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(130, 84)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Inventario"
+        Me.Button1.Text = "Crear Inventario"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
@@ -128,7 +128,7 @@ Partial Class Panel_de_Control
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(130, 84)
         Me.Button6.TabIndex = 7
-        Me.Button6.Text = "Órdenes de Compra"
+        Me.Button6.Text = "Registrar Órden de Compra"
         Me.Button6.UseVisualStyleBackColor = False
         '
         'Button7
@@ -142,7 +142,7 @@ Partial Class Panel_de_Control
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 84)
         Me.Button7.TabIndex = 8
-        Me.Button7.Text = "Egresos"
+        Me.Button7.Text = "Registrar Egresos"
         Me.Button7.UseVisualStyleBackColor = False
         '
         'Button8
@@ -170,7 +170,7 @@ Partial Class Panel_de_Control
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(130, 84)
         Me.Button9.TabIndex = 10
-        Me.Button9.Text = "Clientes"
+        Me.Button9.Text = "Crear Clientes"
         Me.Button9.UseVisualStyleBackColor = False
         '
         'MenuStrip1

@@ -2,12 +2,12 @@
 Public Class Clientes
     Dim Conexion As New MySqlConnection
     Dim Proceso As New MySqlCommand
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Close()
         Panel_de_Control.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         TXT2.Text = ""
         TXT3.Text = ""
         TXT4.Text = ""
@@ -39,5 +39,22 @@ Public Class Clientes
             MsgBox("Error En Registrar y Crear el Nuevo Usuario")
             Panel_de_Control.Show()
         End Try
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Close()
+        Panel_de_Control.Show()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Close()
+        Consultar_Clientes.Show()
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        TXT2.Text = ""
+        TXT3.Text = ""
+        TXT4.Text = ""
+        TXT5.Text = ""
     End Sub
 End Class
