@@ -248,10 +248,13 @@ Partial Class Ventas
         '
         'TXT10
         '
+        Me.TXT10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT10.ForeColor = System.Drawing.Color.Lime
         Me.TXT10.Location = New System.Drawing.Point(151, 227)
         Me.TXT10.Name = "TXT10"
         Me.TXT10.Size = New System.Drawing.Size(120, 20)
         Me.TXT10.TabIndex = 51
+        Me.TXT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
         '
@@ -266,11 +269,13 @@ Partial Class Ventas
         '
         'TXT9
         '
-        Me.TXT9.ForeColor = System.Drawing.Color.Blue
+        Me.TXT9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT9.ForeColor = System.Drawing.Color.Red
         Me.TXT9.Location = New System.Drawing.Point(363, 227)
         Me.TXT9.Name = "TXT9"
         Me.TXT9.Size = New System.Drawing.Size(120, 20)
         Me.TXT9.TabIndex = 49
+        Me.TXT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -342,11 +347,13 @@ Partial Class Ventas
         '
         'TXT7
         '
+        Me.TXT7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT7.ForeColor = System.Drawing.Color.Blue
         Me.TXT7.Location = New System.Drawing.Point(597, 536)
         Me.TXT7.Name = "TXT7"
         Me.TXT7.Size = New System.Drawing.Size(120, 20)
         Me.TXT7.TabIndex = 29
+        Me.TXT7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label17
         '

@@ -80,6 +80,8 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="mysql.data">
       <HintPath>mysql-connector-net-6.0.3-noinstall\mysql.data.dll</HintPath>
@@ -88,6 +90,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -212,6 +215,36 @@
     <Compile Include="Recuperar Clave.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reporte Egresos.Designer.vb">
+      <DependentUpon>Reporte Egresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte Egresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte Ordenes.Designer.vb">
+      <DependentUpon>Reporte Ordenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte Ordenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte Productos.Designer.vb">
+      <DependentUpon>Reporte Productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte Productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte Ventas.Designer.vb">
+      <DependentUpon>Reporte Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.vb">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas.Designer.vb">
       <DependentUpon>Ventas.vb</DependentUpon>
     </Compile>
@@ -271,6 +304,25 @@
     <EmbeddedResource Include="Recuperar Clave.resx">
       <DependentUpon>Recuperar Clave.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte Egresos.rdlc" />
+    <EmbeddedResource Include="Reporte Egresos.resx">
+      <DependentUpon>Reporte Egresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte Orden.rdlc" />
+    <EmbeddedResource Include="Reporte Ordenes.resx">
+      <DependentUpon>Reporte Ordenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte Productos.rdlc" />
+    <EmbeddedResource Include="Reporte Productos.resx">
+      <DependentUpon>Reporte Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte Ventas.resx">
+      <DependentUpon>Reporte Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.rdlc" />
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>

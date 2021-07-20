@@ -63,6 +63,18 @@ Namespace My
                 Return CType(Me("pymeinventariosConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com;user id=ucv0u4lxjvhpc"& _ 
+            "jog;password=hQ8fhikLVvzPAU6RIkpe;persistsecurityinfo=True;database=bynejs3dk0uz"& _ 
+            "uzbn2sur")>  _
+        Public ReadOnly Property bynejs3dk0uzuzbn2surConnectionString() As String
+            Get
+                Return CType(Me("bynejs3dk0uzuzbn2surConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
