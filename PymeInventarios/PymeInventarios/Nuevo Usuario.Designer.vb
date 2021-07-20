@@ -40,6 +40,8 @@ Partial Class Nuevo_Usuario
         Me.TXT5 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.CBO1 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,10 +56,10 @@ Partial Class Nuevo_Usuario
         '
         'TXT6
         '
-        Me.TXT6.Location = New System.Drawing.Point(153, 286)
+        Me.TXT6.Location = New System.Drawing.Point(153, 303)
         Me.TXT6.Name = "TXT6"
         Me.TXT6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TXT6.Size = New System.Drawing.Size(100, 20)
+        Me.TXT6.Size = New System.Drawing.Size(119, 20)
         Me.TXT6.TabIndex = 23
         '
         'Label3
@@ -75,7 +77,7 @@ Partial Class Nuevo_Usuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(37, 158)
+        Me.Label2.Location = New System.Drawing.Point(37, 175)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 21
@@ -104,7 +106,7 @@ Partial Class Nuevo_Usuario
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(38, 289)
+        Me.Label1.Location = New System.Drawing.Point(38, 306)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 13)
         Me.Label1.TabIndex = 18
@@ -112,16 +114,16 @@ Partial Class Nuevo_Usuario
         '
         'TXT1
         '
-        Me.TXT1.Location = New System.Drawing.Point(153, 155)
+        Me.TXT1.Location = New System.Drawing.Point(153, 172)
         Me.TXT1.Name = "TXT1"
-        Me.TXT1.Size = New System.Drawing.Size(100, 20)
+        Me.TXT1.Size = New System.Drawing.Size(119, 20)
         Me.TXT1.TabIndex = 17
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(37, 184)
+        Me.Label4.Location = New System.Drawing.Point(37, 201)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 26
@@ -129,16 +131,16 @@ Partial Class Nuevo_Usuario
         '
         'TXT2
         '
-        Me.TXT2.Location = New System.Drawing.Point(153, 181)
+        Me.TXT2.Location = New System.Drawing.Point(153, 198)
         Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(100, 20)
+        Me.TXT2.Size = New System.Drawing.Size(119, 20)
         Me.TXT2.TabIndex = 25
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(37, 211)
+        Me.Label5.Location = New System.Drawing.Point(37, 228)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 28
@@ -146,16 +148,16 @@ Partial Class Nuevo_Usuario
         '
         'TXT3
         '
-        Me.TXT3.Location = New System.Drawing.Point(153, 208)
+        Me.TXT3.Location = New System.Drawing.Point(153, 225)
         Me.TXT3.Name = "TXT3"
-        Me.TXT3.Size = New System.Drawing.Size(100, 20)
+        Me.TXT3.Size = New System.Drawing.Size(119, 20)
         Me.TXT3.TabIndex = 27
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(37, 237)
+        Me.Label6.Location = New System.Drawing.Point(37, 254)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 13)
         Me.Label6.TabIndex = 30
@@ -165,7 +167,7 @@ Partial Class Nuevo_Usuario
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(38, 263)
+        Me.Label7.Location = New System.Drawing.Point(38, 280)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 32
@@ -173,9 +175,9 @@ Partial Class Nuevo_Usuario
         '
         'TXT5
         '
-        Me.TXT5.Location = New System.Drawing.Point(153, 260)
+        Me.TXT5.Location = New System.Drawing.Point(153, 277)
         Me.TXT5.Name = "TXT5"
-        Me.TXT5.Size = New System.Drawing.Size(100, 20)
+        Me.TXT5.Size = New System.Drawing.Size(119, 20)
         Me.TXT5.TabIndex = 31
         '
         'Button3
@@ -192,18 +194,40 @@ Partial Class Nuevo_Usuario
         Me.DateTimePicker1.CustomFormat = ""
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 234)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 251)
         Me.DateTimePicker1.MinDate = New Date(1901, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(102, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(121, 20)
         Me.DateTimePicker1.TabIndex = 119
         Me.DateTimePicker1.Value = New Date(2021, 7, 17, 0, 0, 0, 0)
+        '
+        'CBO1
+        '
+        Me.CBO1.FormattingEnabled = True
+        Me.CBO1.Items.AddRange(New Object() {"Cédula de Ciudadanía", "NIT", "Cédula de Extranjería", "Pasaporte"})
+        Me.CBO1.Location = New System.Drawing.Point(150, 145)
+        Me.CBO1.Name = "CBO1"
+        Me.CBO1.Size = New System.Drawing.Size(122, 21)
+        Me.CBO1.TabIndex = 121
+        Me.CBO1.Text = "Seleccione"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(34, 148)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(94, 13)
+        Me.Label8.TabIndex = 120
+        Me.Label8.Text = "Tipo Identificación"
         '
         'Nuevo_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 396)
+        Me.Controls.Add(Me.CBO1)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label7)
@@ -248,4 +272,6 @@ Partial Class Nuevo_Usuario
     Friend WithEvents TXT5 As TextBox
     Friend WithEvents Button3 As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents CBO1 As ComboBox
+    Friend WithEvents Label8 As Label
 End Class

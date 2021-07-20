@@ -120,6 +120,7 @@ Partial Class Consultar_Egresos
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Consultar_Egresos"
         Me.Text = "Consultar_Egresos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

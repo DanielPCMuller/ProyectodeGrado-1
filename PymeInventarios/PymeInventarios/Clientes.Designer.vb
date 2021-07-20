@@ -39,6 +39,8 @@ Partial Class Clientes
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -143,7 +145,7 @@ Partial Class Clientes
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(9, 295)
+        Me.Button1.Location = New System.Drawing.Point(11, 317)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(124, 42)
         Me.Button1.TabIndex = 36
@@ -162,7 +164,7 @@ Partial Class Clientes
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(139, 295)
+        Me.Button2.Location = New System.Drawing.Point(141, 317)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(124, 42)
         Me.Button2.TabIndex = 52
@@ -171,7 +173,7 @@ Partial Class Clientes
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(269, 295)
+        Me.Button4.Location = New System.Drawing.Point(271, 317)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(124, 42)
         Me.Button4.TabIndex = 53
@@ -180,18 +182,42 @@ Partial Class Clientes
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(399, 295)
+        Me.Button3.Location = New System.Drawing.Point(401, 317)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(124, 42)
         Me.Button3.TabIndex = 54
         Me.Button3.Text = "Salir"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = ""
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DateTimePicker1.Location = New System.Drawing.Point(244, 284)
+        Me.DateTimePicker1.MinDate = New Date(1901, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
+        Me.DateTimePicker1.TabIndex = 121
+        Me.DateTimePicker1.Value = New Date(2021, 7, 17, 0, 0, 0, 0)
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(130, 287)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 13)
+        Me.Label1.TabIndex = 120
+        Me.Label1.Text = "Fecha de Nacimiento"
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(526, 346)
+        Me.ClientSize = New System.Drawing.Size(526, 374)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
@@ -211,7 +237,7 @@ Partial Class Clientes
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Clientes"
+        Me.Text = "c"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -233,4 +259,6 @@ Partial Class Clientes
     Friend WithEvents Button2 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label1 As Label
 End Class

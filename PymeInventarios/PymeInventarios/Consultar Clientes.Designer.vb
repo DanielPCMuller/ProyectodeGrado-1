@@ -125,7 +125,7 @@ Partial Class Consultar_Clientes
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 13)
         Me.Label2.TabIndex = 99
-        Me.Label2.Text = "Búsqueda Por Apellido"
+        Me.Label2.Text = "Búsqueda Por Nombre"
         '
         'Label4
         '
