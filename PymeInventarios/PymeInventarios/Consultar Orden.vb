@@ -15,6 +15,7 @@ Public Class Consultar_Orden
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Dim Consulta As String
         Dim Lista As Byte
 
@@ -32,6 +33,14 @@ Public Class Consultar_Orden
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
                 DataGridView1.DataMember = "ordenes"
+
+                Dim Columna1 As DataGridViewColumn = DataGridView1.Columns(1)
+                Columna1.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+
+                DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+                Dim Columna2 As DataGridViewColumn = DataGridView1.Columns(4)
+                Columna2.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+
             End If
 
             If TXT2.Text <> "" Then
@@ -45,6 +54,14 @@ Public Class Consultar_Orden
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
                 DataGridView1.DataMember = "ordenes"
+
+                Dim Columna1 As DataGridViewColumn = DataGridView1.Columns(1)
+                Columna1.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+
+                DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+                Dim Columna2 As DataGridViewColumn = DataGridView1.Columns(4)
+                Columna2.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+
             End If
         End If
     End Sub
@@ -53,7 +70,7 @@ Public Class Consultar_Orden
         Try
             Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
-            MsgBox("Conexión Exitosa Con Base de Datos")
+
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrán Consultar las Órdenes de Compra")
             Panel_de_Control.Show()
@@ -69,5 +86,9 @@ Public Class Consultar_Orden
             TXT1.Focus()
             MsgBox("Orden de Compra Eliminada")
         End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

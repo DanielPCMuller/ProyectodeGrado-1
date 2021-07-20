@@ -43,3 +43,15 @@ Fecha_Pago varchar (50),
 Concepto varchar (50),
 Valor_Pago varchar (50)
 );
+
+create table ventas (
+Numero_Factura varchar (50) primary key,
+Fecha_Venta varchar (50),
+Tipo_Identificacion varchar (100),
+Numero_Identificacion varchar (50),
+Nombre_Cliente varchar (100),
+Producto varchar (50),
+Precio double,
+Cantidad int,
+Total_Venta double
+);

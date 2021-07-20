@@ -46,7 +46,7 @@ Public Class Modificar_Inventario
         Try
             Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
-            MsgBox("Conexión Exitosa Con Base de Datos")
+
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Actualizar el Inventario")
             Inicio_Sesion.Show()

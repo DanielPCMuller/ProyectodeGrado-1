@@ -24,7 +24,7 @@ Public Class Inicio_Sesion
             TXT1.Text = ""
             TXT2.Text = ""
         Else
-            MsgBox("Error Al Iniciar Sesión - No Se a Encotrado el Usuario o la Contraseña es Incorrecta")
+            MsgBox("Error Al Iniciar Sesión - No Se Ha Encotrado el Usuario o la Contraseña es Incorrecta")
         End If
     End Sub
 
@@ -34,6 +34,7 @@ Public Class Inicio_Sesion
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
         End
     End Sub
 

@@ -27,7 +27,7 @@ Public Class Ventas
         Try
             Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
-            MsgBox("Conexión Exitosa Con Base de Datos")
+
             Dim Consulta As String
             Consulta = "Select * From inventarios"
             Adaptador = New MySqlDataAdapter(Consulta, Conexion)
