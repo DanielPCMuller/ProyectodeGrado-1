@@ -29,18 +29,18 @@ USE `bynejs3dk0uzuzbn2sur` ;
 -- -----------------------------------------------------
 -- Table `bynejs3dk0uzuzbn2sur`.`Persona`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bynejs3dk0uzuzbn2sur`.`Persona` (
-  `ID_Persona` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS Persona (
+  #`ID_Persona` INT NOT NULL AUTO_INCREMENT,
   `Nombres` VARCHAR(45) NULL,
   `Apellidos` VARCHAR(45) NULL,
   `Tipo_Documento` VARCHAR(45) NULL,
   `Numero_ID` VARCHAR(45) NULL,
   `Fecha_Nacimiento` DATE NULL,
-  `Telefono` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID_Persona`),
-  UNIQUE INDEX `ID_Persona_UNIQUE` (`ID_Persona` ASC),
-  UNIQUE INDEX `Numero_ID_UNIQUE` (`Numero_ID` ASC))
-ENGINE = InnoDB;
+  `Telefono` VARCHAR(45) NULL)
+ # PRIMARY KEY (`ID_Persona`),
+#UNIQUE INDEX `ID_Persona_UNIQUE` (`ID_Persona` ASC),
+#UNIQUE INDEX `Numero_ID_UNIQUE` (`Numero_ID` ASC))
+ENGINE = InnoDB; 
 
 
 -- -----------------------------------------------------
