@@ -51,3 +51,41 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Ventas.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\RdlCompile.cache
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\RdlCompile.compiled
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.exe.config
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.exe
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.xml
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.pdb
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.exe.manifest
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.application
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.exe
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.pdb
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.xml
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\mysql.data.dll
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.vbprojResolveAssemblyReference.cache
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Acerca_de.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.CargaSistema.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Clientes.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Consulta_Inventarios.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Consultar_Clientes.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Consultar_Egresos.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Consultar_Orden.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Egresos.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Inicio_Sesion.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Inventario.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Modificar_Inventario.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Resources.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Nuevo_Usuario.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Ordenes.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Panel_de_Control.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Recuperar_Clave.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Egresos.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Ordenes.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Productos.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Ventas.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reportes.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Ventas.resources
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.vbproj.GenerateResource.Cache
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.exe.manifest
+C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.application

@@ -10,7 +10,7 @@ Public Class Inicio_Sesion
         Dim Lista As Byte
 
         If TXT1.Text <> "" And TXT2.Text <> "" Then
-            Consulta = "select * from usuarios where Identificacion='" & TXT1.Text & "' and Clave= '" & TXT2.Text & "'"
+            Consulta = "SELECT Persona.Numero_ID, Usuario.Clave FROM Usuario INNER JOIN Persona ON Persona.ID_Persona = Usuario.Persona_ID_Persona WHERE Numero_ID ='" & TXT1.Text & "' and Clave= '" & TXT2.Text & "'"
             Adaptador = New MySqlDataAdapter(Consulta, Conexion)
             Datos = New DataSet
             Adaptador.Fill(Datos, "usuario")
