@@ -13,8 +13,8 @@ Public Class Inicio_Sesion
             Consulta = "select * from usuarios where Identificacion='" & TXT1.Text & "' and Clave= '" & TXT2.Text & "'"
             Adaptador = New MySqlDataAdapter(Consulta, Conexion)
             Datos = New DataSet
-            Adaptador.Fill(Datos, "usuarios")
-            Lista = Datos.Tables("usuarios").Rows.Count
+            Adaptador.Fill(Datos, "usuario")
+            Lista = Datos.Tables("usuario").Rows.Count
         End If
 
         If Lista <> 0 Then

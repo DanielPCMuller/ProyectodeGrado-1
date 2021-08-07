@@ -36,6 +36,9 @@ Public Class Inventario
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim FormatoFecha As Date
+        Dim NuevaFecha As Date
+
         If TXT5.Text = "" Then
             MsgBox("Inserte Los Datos Requeridos")
             Panel_de_Control.Show()
@@ -57,7 +60,9 @@ Public Class Inventario
             Proceso.Parameters.AddWithValue("@Nombre_Articulo", TXT2.Text)
             Proceso.Parameters.AddWithValue("@Marca_Articulo", TXT8.Text)
             Proceso.Parameters.AddWithValue("@Empresa_Pedido", TXT3.Text)
-            Proceso.Parameters.AddWithValue("@Fecha_Compra", DateTimePicker1.Text)
+            FormatoFecha = DateTimePicker1.Text
+            NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
+            Proceso.Parameters.AddWithValue("@Fecha_Compra", NuevaFecha)
             Proceso.Parameters.AddWithValue("@Cantidad", TXT4.Text)
             Proceso.Parameters.AddWithValue("@Precio_Compra", TXT5.Text)
             Proceso.Parameters.AddWithValue("@Precio_Venta", TXT6.Text)

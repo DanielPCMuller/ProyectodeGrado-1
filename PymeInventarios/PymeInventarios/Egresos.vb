@@ -26,6 +26,9 @@ Public Class Egresos
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim FormatoFecha As Date
+        Dim NuevaFecha As Date
+
         If TXT1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Then
             MsgBox("Inserte los Datos del Egreso")
             TXT1.Focus()
@@ -35,7 +38,9 @@ Public Class Egresos
                 Proceso.Parameters.AddWithValue("@Factura_Numero", TXT1.Text)
                 Proceso.Parameters.AddWithValue("@Tipo_Pago", CBO1.Text)
                 Proceso.Parameters.AddWithValue("@Beneficiario_Pago", TXT2.Text)
-                Proceso.Parameters.AddWithValue("@Fecha_Pago", DateTimePicker1.Text)
+                FormatoFecha = DateTimePicker1.Text
+                NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
+                Proceso.Parameters.AddWithValue("@Fecha_Pago", NuevaFecha)
                 Proceso.Parameters.AddWithValue("@Concepto", TXT3.Text)
                 Proceso.Parameters.AddWithValue("@Valor_Pago", TXT4.Text)
                 Proceso.ExecuteNonQuery()

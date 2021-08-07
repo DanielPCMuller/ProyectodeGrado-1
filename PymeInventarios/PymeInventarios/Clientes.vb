@@ -26,6 +26,8 @@ Public Class Clientes
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim FormatoFecha As Date
+        Dim NuevaFecha As Date
         Try
             Proceso = New MySqlCommand("Insert Into clientes(Tipo_Identificacion, Identificacion, Nombres_Cliente, Apellidos_Cliente, Telefono)" & Chr(13) & "Values(@Tipo_Identificacion, @Identificacion, @Nombres_Cliente, @Apellidos_Cliente, @Telefono)", Conexion)
             Proceso.Parameters.AddWithValue("@Tipo_Identificacion", CBO1.Text)
@@ -33,6 +35,8 @@ Public Class Clientes
             Proceso.Parameters.AddWithValue("@Nombres_Cliente", TXT3.Text)
             Proceso.Parameters.AddWithValue("@Apellidos_Cliente", TXT4.Text)
             Proceso.Parameters.AddWithValue("@Telefono", TXT5.Text)
+            FormatoFecha = DateTimePicker1.Text
+            NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
             Proceso.ExecuteNonQuery()
             MsgBox("Cliente Registrado y Creado Correctamente")
         Catch ex As Exception

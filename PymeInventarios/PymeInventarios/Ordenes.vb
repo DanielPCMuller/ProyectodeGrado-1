@@ -26,6 +26,10 @@ Public Class Ordenes
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim FormatoFecha As Date
+        Dim NuevaFecha As Date
+
         If TXT1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Or TXT5.Text = "" Then
             MsgBox("Inserte los Datos de la Orden")
             TXT1.Focus()
@@ -38,6 +42,8 @@ Public Class Ordenes
                 Proceso.Parameters.AddWithValue("@Empresa_Pedido", TXT3.Text)
                 Proceso.Parameters.AddWithValue("@Cantidad", TXT4.Text)
                 Proceso.Parameters.AddWithValue("@Precio_Compra", TXT5.Text)
+                FormatoFecha = DateTimePicker1.Text
+                NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
                 Proceso.ExecuteNonQuery()
                 MsgBox("Órden de Compra Registrada y Creada Correctamente")
                 TXT1.Text = ""
@@ -58,4 +64,6 @@ Public Class Ordenes
         Close()
         Consultar_Orden.Show()
     End Sub
+
+
 End Class
