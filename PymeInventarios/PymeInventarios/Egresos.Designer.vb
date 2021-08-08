@@ -88,7 +88,7 @@ Partial Class Egresos
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(107, 34)
         Me.Button3.TabIndex = 154
-        Me.Button3.Text = "Salir"
+        Me.Button3.Text = "Atrás"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label7
@@ -209,6 +209,7 @@ Partial Class Egresos
         Me.CBO1.Name = "CBO1"
         Me.CBO1.Size = New System.Drawing.Size(134, 21)
         Me.CBO1.TabIndex = 161
+        Me.CBO1.Text = "Seleccione"
         '
         'Egresos
         '

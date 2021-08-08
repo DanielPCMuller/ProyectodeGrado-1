@@ -58,7 +58,7 @@ Partial Class Clientes
         '
         Me.TXT5.Location = New System.Drawing.Point(244, 258)
         Me.TXT5.Name = "TXT5"
-        Me.TXT5.Size = New System.Drawing.Size(122, 20)
+        Me.TXT5.Size = New System.Drawing.Size(151, 20)
         Me.TXT5.TabIndex = 48
         '
         'Label6
@@ -75,7 +75,7 @@ Partial Class Clientes
         '
         Me.TXT4.Location = New System.Drawing.Point(244, 232)
         Me.TXT4.Name = "TXT4"
-        Me.TXT4.Size = New System.Drawing.Size(122, 20)
+        Me.TXT4.Size = New System.Drawing.Size(151, 20)
         Me.TXT4.TabIndex = 46
         '
         'Label5
@@ -92,7 +92,7 @@ Partial Class Clientes
         '
         Me.TXT3.Location = New System.Drawing.Point(244, 206)
         Me.TXT3.Name = "TXT3"
-        Me.TXT3.Size = New System.Drawing.Size(122, 20)
+        Me.TXT3.Size = New System.Drawing.Size(151, 20)
         Me.TXT3.TabIndex = 44
         '
         'Label4
@@ -109,7 +109,7 @@ Partial Class Clientes
         '
         Me.TXT2.Location = New System.Drawing.Point(244, 179)
         Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(122, 20)
+        Me.TXT2.Size = New System.Drawing.Size(151, 20)
         Me.TXT2.TabIndex = 42
         '
         'Label3
@@ -158,7 +158,7 @@ Partial Class Clientes
         Me.CBO1.Items.AddRange(New Object() {"Cédula de Ciudadanía", "NIT", "Cédula de Extranjería", "Pasaporte"})
         Me.CBO1.Location = New System.Drawing.Point(244, 153)
         Me.CBO1.Name = "CBO1"
-        Me.CBO1.Size = New System.Drawing.Size(122, 21)
+        Me.CBO1.Size = New System.Drawing.Size(151, 21)
         Me.CBO1.TabIndex = 51
         Me.CBO1.Text = "Seleccione"
         '
@@ -186,7 +186,7 @@ Partial Class Clientes
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(124, 42)
         Me.Button3.TabIndex = 54
-        Me.Button3.Text = "Salir"
+        Me.Button3.Text = "Atrás"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
@@ -197,7 +197,7 @@ Partial Class Clientes
         Me.DateTimePicker1.Location = New System.Drawing.Point(244, 284)
         Me.DateTimePicker1.MinDate = New Date(1901, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(151, 20)
         Me.DateTimePicker1.TabIndex = 121
         Me.DateTimePicker1.Value = New Date(2021, 7, 17, 0, 0, 0, 0)
         '

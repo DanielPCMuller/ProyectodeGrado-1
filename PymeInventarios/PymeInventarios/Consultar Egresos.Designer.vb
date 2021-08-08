@@ -26,11 +26,11 @@ Partial Class Consultar_Egresos
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TXT1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CBO1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class Consultar_Egresos
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
         Me.Button3.TabIndex = 90
-        Me.Button3.Text = "Salir"
+        Me.Button3.Text = "Atrás"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
@@ -61,13 +61,6 @@ Partial Class Consultar_Egresos
         Me.Button1.TabIndex = 88
         Me.Button1.Text = "Buscar Pagos"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TXT1
-        '
-        Me.TXT1.Location = New System.Drawing.Point(257, 149)
-        Me.TXT1.Name = "TXT1"
-        Me.TXT1.Size = New System.Drawing.Size(222, 20)
-        Me.TXT1.TabIndex = 85
         '
         'Label1
         '
@@ -107,15 +100,24 @@ Partial Class Consultar_Egresos
         Me.PictureBox1.TabIndex = 81
         Me.PictureBox1.TabStop = False
         '
+        'CBO1
+        '
+        Me.CBO1.FormattingEnabled = True
+        Me.CBO1.Location = New System.Drawing.Point(257, 149)
+        Me.CBO1.Name = "CBO1"
+        Me.CBO1.Size = New System.Drawing.Size(200, 21)
+        Me.CBO1.TabIndex = 91
+        Me.CBO1.Text = "Seleccione"
+        '
         'Consultar_Egresos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 448)
+        Me.Controls.Add(Me.CBO1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TXT1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
@@ -133,9 +135,9 @@ Partial Class Consultar_Egresos
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TXT1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents CBO1 As ComboBox
 End Class
