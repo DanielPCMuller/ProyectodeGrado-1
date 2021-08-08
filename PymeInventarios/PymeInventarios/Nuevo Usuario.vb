@@ -24,7 +24,8 @@ Public Class Nuevo_Usuario
     End Sub
 
     Private Sub Nuevo_Usuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Datos_Conexion As String = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+        'Dim Datos_Conexion As String = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"'
+        Dim Datos_Conexion As String = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
         Try
             Conexion.ConnectionString = Datos_Conexion
             Conexion.Open()

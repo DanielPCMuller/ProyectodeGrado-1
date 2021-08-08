@@ -19,7 +19,8 @@ Public Class Egresos
     End Sub
 
     Private Sub Egresos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Datos_Conexion As String = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+        Dim Datos_Conexion As String = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
+        'Dim Datos_Conexion As String = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"'
         Try
             Conexion.ConnectionString = Datos_Conexion
             Conexion.Open()

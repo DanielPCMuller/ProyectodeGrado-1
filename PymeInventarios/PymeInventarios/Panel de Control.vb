@@ -1,8 +1,6 @@
-﻿Public Class Panel_de_Control
+﻿
+Public Class Panel_de_Control
     Private Calculadora As Process
-    Private Sub Panel_de_Control_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Close()
@@ -15,7 +13,7 @@
         Inventario.Show()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) 
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -58,7 +56,5 @@
         Reportes.Show()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
-    End Sub
 End Class
