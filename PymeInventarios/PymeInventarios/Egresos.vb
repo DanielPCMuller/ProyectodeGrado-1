@@ -83,7 +83,8 @@ Public Class Egresos
 
                 'Insert a la Tabla Entidad Prestadora'
                 Proceso2 = New MySqlCommand("INSERT INTO Entidad_Prestadora(Nombre_Entidad, Egresos_ID_Egreso) " & Chr(13) & " VALUES (@Nombre_Entidad, @Egresos_ID_Egreso)", Conexion2)
-                Proceso2.Parameters.AddWithValue("@Nombre_Entidad", Guardar_Factura)
+                Proceso2.Parameters.AddWithValue("@Nombre_Entidad", TXT2.Text)
+                Proceso2.Parameters.AddWithValue("@Egresos_ID_Egreso", Guardar_Factura)
                 Proceso2.ExecuteNonQuery()
                 MsgBox("Egreso Registrado Correctamente")
                 TXT1.Text = ""
@@ -91,9 +92,9 @@ Public Class Egresos
                 TXT3.Text = ""
                 TXT4.Text = ""
                 TXT1.Focus()
-            Catch ex As MySql.Data.MySqlClient.MySqlException
+            Catch ex As Exception
                 Console.WriteLine(ex.Message)
-                'MsgBox("Error En Registrar y Crear el Egreso")
+                MsgBox("Error En Registrar y Crear el Egreso")
                 Close()
                 Panel_de_Control.Show()
             End Try
