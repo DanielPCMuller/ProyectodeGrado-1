@@ -84,7 +84,7 @@ Partial Class Consultar_Orden
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(127, 164)
+        Me.Label2.Location = New System.Drawing.Point(115, 164)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(118, 13)
         Me.Label2.TabIndex = 76
@@ -100,11 +100,11 @@ Partial Class Consultar_Orden
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(127, 138)
+        Me.Label1.Location = New System.Drawing.Point(115, 138)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 13)
+        Me.Label1.Size = New System.Drawing.Size(146, 13)
         Me.Label1.TabIndex = 74
-        Me.Label1.Text = "Búsqueda Por Código"
+        Me.Label1.Text = "Búsqueda Por Código Pedido"
         '
         'DataGridView1
         '
