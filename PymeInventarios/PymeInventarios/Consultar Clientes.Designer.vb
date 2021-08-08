@@ -85,9 +85,9 @@ Partial Class Consultar_Clientes
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(28, 231)
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 231)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(561, 181)
+        Me.DataGridView1.Size = New System.Drawing.Size(522, 181)
         Me.DataGridView1.TabIndex = 93
         '
         'Label3
@@ -144,7 +144,6 @@ Partial Class Consultar_Clientes
         Me.CBO1.Name = "CBO1"
         Me.CBO1.Size = New System.Drawing.Size(222, 21)
         Me.CBO1.TabIndex = 102
-        Me.CBO1.Text = "Seleccione"
         '
         'Consultar_Clientes
         '

@@ -12,11 +12,14 @@ Public Class Consultar_Clientes
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TXT1.Text = ""
         TXT2.Text = ""
+        CBO1.Text = ""
+        DataGridView1.Columns.Clear()
     End Sub
 
     Private Sub Consultar_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+            Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
+            'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
 
         Catch ex As Exception
@@ -26,49 +29,55 @@ Public Class Consultar_Clientes
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DataGridView1.Columns.Clear()
+        TXT1.Text = ""
+        TXT2.Text = ""
+        CBO1.Text = ""
+
         Dim Consulta As String
         Dim Lista As Byte
 
         If TXT1.Text & TXT2.Text & CBO1.Text = "" Then
             MsgBox("Inserte la Opción de Búsqueda del Cliente en Apellido o Identificación")
+
         Else
             If TXT1.Text <> "" Then
-                Consulta = "Select * From clientes Where identificacion='" & TXT1.Text & "'"
+                Consulta = "SELECT a.Nombres, a.Apellidos, a.Tipo_Documento, a.Numero_ID, a.Telefono FROM Persona a INNER JOIN Cliente b on a.ID_Persona= b.Persona_ID_Persona and a.Numero_ID ='" & TXT1.Text & "'"
                 Adaptador = New MySqlDataAdapter(Consulta, Conexion)
                 Datos = New DataSet
-                Adaptador.Fill(Datos, "clientes")
-                Lista = Datos.Tables("clientes").Rows.Count
+                Adaptador.Fill(Datos, "Persona")
+                Lista = Datos.Tables("Persona").Rows.Count
             End If
 
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
-                DataGridView1.DataMember = "clientes"
+                DataGridView1.DataMember = "Persona"
             End If
 
             If TXT2.Text <> "" Then
-                Consulta = "Select * From clientes Where Apellidos_Cliente='" & TXT2.Text & "'"
+                Consulta = "SELECT a.Nombres, a.Apellidos, a.Tipo_Documento, a.Numero_ID, a.Telefono FROM Persona a INNER JOIN Cliente b on a.ID_Persona= b.Persona_ID_Persona and a.Nombres ='" & TXT2.Text & "'"
                 Adaptador = New MySqlDataAdapter(Consulta, Conexion)
                 Datos = New DataSet
-                Adaptador.Fill(Datos, "clientes")
-                Lista = Datos.Tables("clientes").Rows.Count
+                Adaptador.Fill(Datos, "Persona")
+                Lista = Datos.Tables("Persona").Rows.Count
             End If
 
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
-                DataGridView1.DataMember = "clientes"
+                DataGridView1.DataMember = "Persona"
             End If
 
             If CBO1.Text <> "" Then
-                Consulta = "Select * From clientes Where Tipo_identificacion='" & CBO1.Text & "'"
+                Consulta = "SELECT a.Nombres, a.Apellidos, a.Tipo_Documento, a.Numero_ID, a.Telefono FROM Persona a INNER JOIN Cliente b on a.ID_Persona= b.Persona_ID_Persona and a.Tipo_Documento ='" & CBO1.Text & "'"
                 Adaptador = New MySqlDataAdapter(Consulta, Conexion)
                 Datos = New DataSet
-                Adaptador.Fill(Datos, "clientes")
-                Lista = Datos.Tables("clientes").Rows.Count
+                Adaptador.Fill(Datos, "Persona")
+                Lista = Datos.Tables("Persona").Rows.Count
             End If
 
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
-                DataGridView1.DataMember = "clientes"
+                DataGridView1.DataMember = "Persona"
             End If
         End If
     End Sub
