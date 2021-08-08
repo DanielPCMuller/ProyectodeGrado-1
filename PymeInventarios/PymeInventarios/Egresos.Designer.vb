@@ -70,7 +70,7 @@ Partial Class Egresos
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(134, 20)
         Me.DateTimePicker1.TabIndex = 156
-        Me.DateTimePicker1.Value = New Date(2021, 7, 17, 0, 0, 0, 0)
+        Me.DateTimePicker1.Value = New Date(2021, 1, 1, 0, 0, 0, 0)
         '
         'Label8
         '
