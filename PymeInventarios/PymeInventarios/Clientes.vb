@@ -1,8 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Clientes
     Dim Conexion As New MySqlConnection
-    Dim Conexion2 As New MySqlConnection
-    Dim Conexion3 As New MySqlConnection
+    'Dim Conexion2 As New MySqlConnection
+    'Dim Conexion3 As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Dim Proceso2 As New MySqlCommand
     Dim Proceso3 As New MySqlCommand
@@ -25,10 +25,10 @@ Public Class Clientes
             'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"'
             Conexion.ConnectionString = Datos_Conexion
             Conexion.Open()
-            Conexion2.ConnectionString = Datos_Conexion
-            Conexion2.Open()
-            Conexion3.ConnectionString = Datos_Conexion
-            Conexion3.Open()
+            'Conexion2.ConnectionString = Datos_Conexion
+            'Conexion2.Open()
+            'Conexion3.ConnectionString = Datos_Conexion
+            'Conexion3.Open()
         Catch ex As System.ArgumentNullException
             Console.WriteLine(ex.Message)
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Crear Un Nuevo Cliente")
@@ -50,9 +50,11 @@ Public Class Clientes
             NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
             Proceso.Parameters.AddWithValue("@Fecha_Nacimiento", NuevaFecha)
             Proceso.ExecuteNonQuery()
+            Conexion.Close()
+            Conexion.Open()
 
             'Select ID Tabla Persona Para Insertarlo en Tabla Cliente'
-            Proceso2 = New MySqlCommand("SELECT ID_Persona FROM Persona WHERE Numero_ID = '" & TXT2.Text & "'", Conexion2)
+            Proceso2 = New MySqlCommand("SELECT ID_Persona FROM Persona WHERE Numero_ID = '" & TXT2.Text & "'", Conexion)
             Dim Leer As MySqlDataReader = Proceso2.ExecuteReader()
             Dim Guardar_ID As String
             If Leer.Read = True Then
@@ -60,11 +62,14 @@ Public Class Clientes
             End If
             Leer.Close()
             Proceso2.ExecuteNonQuery()
+            Conexion.Close()
+            Conexion.Open()
 
             'Insertar Referencia de la Persona en Tabla Cliente' 
-            Proceso3 = New MySqlCommand("INSERT INTO Cliente(Persona_ID_Persona) VALUES ( @Persona_ID_Persona)", Conexion3)
+            Proceso3 = New MySqlCommand("INSERT INTO Cliente(Persona_ID_Persona) VALUES ( @Persona_ID_Persona)", Conexion)
             Proceso3.Parameters.AddWithValue("@Persona_ID_Persona", Guardar_ID)
             Proceso3.ExecuteNonQuery()
+            Conexion.Close()
             MsgBox("Cliente Registrado y Creado Correctamente")
         Catch ex As MySqlException
             Console.WriteLine(ex.Message)
@@ -74,6 +79,7 @@ Public Class Clientes
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Conexion.Close()
         Close()
         Panel_de_Control.Show()
     End Sub

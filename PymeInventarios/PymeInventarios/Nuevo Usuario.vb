@@ -1,12 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Nuevo_Usuario
     Dim Conexion As New MySqlConnection
-    Dim Conexion1 As New MySqlConnection
-    Dim Conexion2 As New MySqlConnection
+    ' Dim Conexion1 As New MySqlConnection
+    'Dim Conexion2 As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Dim Proceso2 As New MySqlCommand
     Dim Proceso3 As New MySqlCommand
-    Dim Proceso4 As New MySqlCommand
+
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -29,10 +29,10 @@ Public Class Nuevo_Usuario
         Try
             Conexion.ConnectionString = Datos_Conexion
             Conexion.Open()
-            Conexion1.ConnectionString = Datos_Conexion
-            Conexion1.Open()
-            Conexion2.ConnectionString = Datos_Conexion
-            Conexion2.Open()
+            'Conexion1.ConnectionString = Datos_Conexion
+            'Conexion1.Open()
+            'Conexion2.ConnectionString = Datos_Conexion
+            'Conexion2.Open()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Crear Un Nuevo Usuario")
             Inicio_Sesion.Show()
@@ -53,9 +53,11 @@ Public Class Nuevo_Usuario
             Proceso.Parameters.AddWithValue("@Fecha_Nacimiento", NuevaFecha)
             Proceso.Parameters.AddWithValue("@Telefono", TXT5.Text)
             Proceso.ExecuteNonQuery()
+            Conexion.Close()
+            Conexion.Open()
 
             'Select Para Usuario Recien Creado y Recuperar ID'
-            Proceso2 = New MySqlCommand("SELECT ID_Persona FROM Persona WHERE Numero_ID = '" & TXT1.Text & "'", Conexion1)
+            Proceso2 = New MySqlCommand("SELECT ID_Persona FROM Persona WHERE Numero_ID = '" & TXT1.Text & "'", Conexion)
             Dim Leer As MySqlDataReader = Proceso2.ExecuteReader()
             Dim Guardar_ID As String
             If Leer.Read = True Then
@@ -63,12 +65,15 @@ Public Class Nuevo_Usuario
             End If
             Leer.Close()
             Proceso2.ExecuteNonQuery()
+            Conexion.Close()
+            Conexion.Open()
 
             'Insertar Clave Tabla Usuario'
-            Proceso4 = New MySqlCommand("INSERT INTO Usuario(Clave, Persona_ID_Persona) VALUES (@Clave, @Persona_ID_Persona)", Conexion2)
-            Proceso4.Parameters.AddWithValue("@Clave", TXT6.Text)
-            Proceso4.Parameters.AddWithValue("@Persona_ID_Persona", Guardar_ID)
-            Proceso4.ExecuteNonQuery()
+            Proceso3 = New MySqlCommand("INSERT INTO Usuario(Clave, Persona_ID_Persona) VALUES (@Clave, @Persona_ID_Persona)", Conexion)
+            Proceso3.Parameters.AddWithValue("@Clave", TXT6.Text)
+            Proceso3.Parameters.AddWithValue("@Persona_ID_Persona", Guardar_ID)
+            Proceso3.ExecuteNonQuery()
+            Conexion.Close()
             MsgBox("Usuario Registrado y Creado Correctamente")
             Close()
             Inicio_Sesion.Show()

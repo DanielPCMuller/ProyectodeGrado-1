@@ -45,7 +45,7 @@ Partial Class Consultar_Clientes
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
         Me.Button3.TabIndex = 98
-        Me.Button3.Text = "Salir"
+        Me.Button3.Text = "Atrás"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2

@@ -18,14 +18,16 @@ Public Class Inicio_Sesion
         End If
 
         If Lista <> 0 Then
+            Conexion.Close()
             MsgBox("Bienvenido a MyEasyManage")
             Panel_de_Control.Show()
-            Hide()
+            Close()
             TXT1.Text = ""
             TXT2.Text = ""
         Else
             MsgBox("Error Al Iniciar Sesión - No Se Ha Encotrado el Usuario o la Contraseña es Incorrecta")
         End If
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -34,6 +36,7 @@ Public Class Inicio_Sesion
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Conexion.Close()
         Close()
         End
     End Sub

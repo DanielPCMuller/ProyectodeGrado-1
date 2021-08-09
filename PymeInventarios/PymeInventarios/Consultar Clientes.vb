@@ -5,6 +5,7 @@ Public Class Consultar_Clientes
     Dim Conexion As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Conexion.Close()
         Close()
         Clientes.Show()
     End Sub
@@ -80,6 +81,7 @@ Public Class Consultar_Clientes
                 DataGridView1.DataMember = "Persona"
             End If
         End If
+        Conexion.Close()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

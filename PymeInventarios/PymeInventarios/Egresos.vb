@@ -1,8 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Egresos
     Dim Conexion As New MySqlConnection
-    Dim Conexion1 As New MySqlConnection
-    Dim Conexion2 As New MySqlConnection
+    'Dim Conexion1 As New MySqlConnection
+    'Dim Conexion2 As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Dim Proceso1 As New MySqlCommand
     Dim Proceso2 As New MySqlCommand
@@ -24,10 +24,10 @@ Public Class Egresos
         Try
             Conexion.ConnectionString = Datos_Conexion
             Conexion.Open()
-            Conexion1.ConnectionString = Datos_Conexion
-            Conexion1.Open()
-            Conexion2.ConnectionString = Datos_Conexion
-            Conexion2.Open()
+            'Conexion1.ConnectionString = Datos_Conexion
+            'Conexion1.Open()
+            'Conexion2.ConnectionString = Datos_Conexion
+            'Conexion2.Open()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Ingresar Productos")
             Panel_de_Control.Show()
@@ -71,9 +71,11 @@ Public Class Egresos
                 Proceso.Parameters.AddWithValue("@Concepto_Pago", TXT3.Text)
                 Proceso.Parameters.AddWithValue("@Valor_Pago", TXT4.Text)
                 Proceso.ExecuteNonQuery()
+                Conexion.Close()
+                Conexion.Open()
 
                 'Select a la Tabla Egresos'
-                Proceso1 = New MySqlCommand("SELECT ID_Egreso FROM Egresos WHERE Factura_Servicio = '" & TXT1.Text & "'", Conexion1)
+                Proceso1 = New MySqlCommand("SELECT ID_Egreso FROM Egresos WHERE Factura_Servicio = '" & TXT1.Text & "'", Conexion)
                 Dim Leer As MySqlDataReader = Proceso1.ExecuteReader()
                 Dim Guardar_Factura As String
                 If Leer.Read = True Then
@@ -81,12 +83,15 @@ Public Class Egresos
                 End If
                 Leer.Close()
                 Proceso1.ExecuteNonQuery()
+                Conexion.Close()
+                Conexion.Open()
 
                 'Insert a la Tabla Entidad Prestadora'
-                Proceso2 = New MySqlCommand("INSERT INTO Entidad_Prestadora(Nombre_Entidad, Egresos_ID_Egreso) " & Chr(13) & " VALUES (@Nombre_Entidad, @Egresos_ID_Egreso)", Conexion2)
+                Proceso2 = New MySqlCommand("INSERT INTO Entidad_Prestadora(Nombre_Entidad, Egresos_ID_Egreso) " & Chr(13) & " VALUES (@Nombre_Entidad, @Egresos_ID_Egreso)", Conexion)
                 Proceso2.Parameters.AddWithValue("@Nombre_Entidad", TXT2.Text)
                 Proceso2.Parameters.AddWithValue("@Egresos_ID_Egreso", Guardar_Factura)
                 Proceso2.ExecuteNonQuery()
+                Conexion.Close()
                 MsgBox("Egreso Registrado Correctamente")
                 TXT1.Text = ""
                 TXT2.Text = ""

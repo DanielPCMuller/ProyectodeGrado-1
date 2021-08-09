@@ -5,9 +5,9 @@ Public Class Consultar_Egresos
     Dim Conexion As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Conexion.Close()
         Close()
         Egresos.Show()
-        Conexion.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -28,7 +28,6 @@ Public Class Consultar_Egresos
             Adaptador.Fill(Datos.Tables("Entidad_Prestadora"))
             CBO1.DataSource = Datos.Tables("Entidad_Prestadora")
             CBO1.ValueMember = "Nombre_Entidad"
-            Conexion.Close()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrán Consultar los Egresos")
             Panel_de_Control.Show()
@@ -55,5 +54,6 @@ Public Class Consultar_Egresos
                 DataGridView1.DataMember = "Egresos"
             End If
         End If
+        Conexion.Close()
     End Sub
 End Class
