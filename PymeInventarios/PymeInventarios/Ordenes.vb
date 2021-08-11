@@ -8,6 +8,8 @@ Public Class Ordenes
     Dim Proceso5 As New MySqlCommand
     Dim Proceso6 As New MySqlCommand
     Dim Proceso7 As New MySqlCommand
+    Dim Proceso8 As New MySqlCommand
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Conexion.Close()
@@ -32,6 +34,7 @@ Public Class Ordenes
             Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
             'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
+            Conexion.Close()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Ingresar Productos")
             Panel_de_Control.Show()
@@ -55,7 +58,7 @@ Public Class Ordenes
         ElseIf MsgBox("¿Está Seguro Que Desea Registrar la Órden?", MsgBoxStyle.OkCancel) Then
 
             Try
-
+                Conexion.Open()
                 Proceso2 = New MySqlCommand("INSERT INTO Empresa(Nombre_Empresa)" & Chr(13) & "Values(@Nombre_Empresa)", Conexion)
                 Proceso2.Parameters.AddWithValue("@Nombre_Empresa", TXT7.Text)
                 Proceso2.ExecuteNonQuery()
@@ -119,6 +122,14 @@ Public Class Ordenes
                 Proceso7.Parameters.AddWithValue("@Orden_Pedido_ID_Orden", PedidoID)
                 Console.WriteLine(Precio_Compra)
                 Proceso7.ExecuteNonQuery()
+                Conexion.Close()
+
+                Conexion.Open()
+                Proceso8 = New MySqlCommand("INSERT INTO Producto_Empresa(Productos_ID_Producto, Empresa_ID_Empresa)" & Chr(13) & "Values(@Productos_ID_Producto, @Empresa_ID_Empresa)", Conexion)
+                Proceso8.Parameters.AddWithValue("@Productos_ID_Producto", ProductosID)
+                Proceso8.Parameters.AddWithValue("@Empresa_ID_Empresa", EmpresaID)
+                Console.WriteLine(Precio_Compra)
+                Proceso8.ExecuteNonQuery()
                 Conexion.Close()
 
                 MsgBox("Orden Registrada Correctamente")

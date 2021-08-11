@@ -27,13 +27,13 @@ Partial Class Consultar_Orden
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TXT2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TXT1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CBO2 = New System.Windows.Forms.ComboBox()
+        Me.TXT1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class Consultar_Orden
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
         Me.Button3.TabIndex = 80
-        Me.Button3.Text = "Salir"
+        Me.Button3.Text = "Atrás"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
@@ -62,7 +62,7 @@ Partial Class Consultar_Orden
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(122, 55)
         Me.Button2.TabIndex = 79
-        Me.Button2.Text = "Borrar"
+        Me.Button2.Text = "Limpiar Campos"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -74,13 +74,6 @@ Partial Class Consultar_Orden
         Me.Button1.Text = "Buscar Órden"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TXT2
-        '
-        Me.TXT2.Location = New System.Drawing.Point(273, 161)
-        Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(222, 20)
-        Me.TXT2.TabIndex = 77
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -89,13 +82,6 @@ Partial Class Consultar_Orden
         Me.Label2.Size = New System.Drawing.Size(118, 13)
         Me.Label2.TabIndex = 76
         Me.Label2.Text = "Búsqueda Por Empresa"
-        '
-        'TXT1
-        '
-        Me.TXT1.Location = New System.Drawing.Point(273, 135)
-        Me.TXT1.Name = "TXT1"
-        Me.TXT1.Size = New System.Drawing.Size(222, 20)
-        Me.TXT1.TabIndex = 75
         '
         'Label1
         '
@@ -135,18 +121,34 @@ Partial Class Consultar_Orden
         Me.PictureBox1.TabIndex = 71
         Me.PictureBox1.TabStop = False
         '
+        'CBO2
+        '
+        Me.CBO2.FormattingEnabled = True
+        Me.CBO2.Location = New System.Drawing.Point(267, 162)
+        Me.CBO2.Name = "CBO2"
+        Me.CBO2.Size = New System.Drawing.Size(207, 21)
+        Me.CBO2.TabIndex = 85
+        Me.CBO2.Text = "Seleccione"
+        '
+        'TXT1
+        '
+        Me.TXT1.Location = New System.Drawing.Point(267, 135)
+        Me.TXT1.Name = "TXT1"
+        Me.TXT1.Size = New System.Drawing.Size(207, 20)
+        Me.TXT1.TabIndex = 86
+        '
         'Consultar_Orden
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(630, 457)
+        Me.Controls.Add(Me.TXT1)
+        Me.Controls.Add(Me.CBO2)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TXT2)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TXT1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
@@ -166,11 +168,11 @@ Partial Class Consultar_Orden
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TXT2 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TXT1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents CBO2 As ComboBox
+    Friend WithEvents TXT1 As TextBox
 End Class

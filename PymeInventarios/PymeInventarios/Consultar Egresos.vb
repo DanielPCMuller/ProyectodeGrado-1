@@ -12,6 +12,7 @@ Public Class Consultar_Egresos
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         CBO1.Text = ""
+        DataGridView1.Columns.Clear()
     End Sub
 
     Private Sub Consultar_Egresos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -52,6 +53,7 @@ Public Class Consultar_Egresos
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
                 DataGridView1.DataMember = "Egresos"
+                DataGridView1.Columns.Clear()
             End If
         End If
         Conexion.Close()
