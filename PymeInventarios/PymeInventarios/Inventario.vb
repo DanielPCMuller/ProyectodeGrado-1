@@ -14,6 +14,7 @@ Public Class Inventario
         CBO1.Text = ""
         TXT3.Text = ""
         TXT1.Text = ""
+        TXT2.Text = ""
         TXT4.Text = ""
         TXT5.Text = ""
         DataGridView1.Columns.Clear()
@@ -98,6 +99,15 @@ Public Class Inventario
         Precio_Venta = Precio_Compra + Utilidad
         TXT4.Text = Precio_Venta
         TXT5.Text = Utilidad
+
+        DataGridView1.Columns.Add("Nombre_Producto", "Nombre_Producto")
+        DataGridView1.Columns.Add("Cantidad", "Cantidad")
+        DataGridView1.Columns.Add("Precio_Compra", "Precio Compra")
+        DataGridView1.Columns.Add("Porcentaje_Utilidad", "Porcentaje Utilidad")
+        DataGridView1.Columns.Add("Precio_Venta", "Precio Venta")
+        DataGridView1.Columns.Add("Utilidad", "Utilidad")
+        DataGridView1.Rows.Add(CBO1.Text, TXT1.Text, TXT2.Text, TXT3.Text, TXT4.Text, TXT5.Text)
+        Button1.Enabled = True
 
     End Sub
 End Class
