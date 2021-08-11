@@ -26,4 +26,8 @@
             Hide()
         End If
     End Sub
+
+    Private Sub CargaSistema_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
 End Class

@@ -153,4 +153,8 @@ Public Class Ventas
             TXT7.Text = Total.ToString()
         Next
     End Sub
+
+    Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Panel_de_Control.Show()
+    End Sub
 End Class

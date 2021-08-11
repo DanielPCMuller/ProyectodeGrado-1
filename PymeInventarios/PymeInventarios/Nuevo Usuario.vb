@@ -75,7 +75,7 @@ Public Class Nuevo_Usuario
             Proceso3.ExecuteNonQuery()
             Conexion.Close()
             MsgBox("Usuario Registrado y Creado Correctamente")
-            Close()
+            Hide()
             Inicio_Sesion.Show()
         Catch ex As MySqlException
             Console.WriteLine(ex.Message)
@@ -85,11 +85,9 @@ Public Class Nuevo_Usuario
             'Catch ex2 As System.InvalidOperationException
             '   Console.WriteLine(ex2.Message)
         End Try
+    End Sub
 
-
-
-
-
-
+    Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Inicio_Sesion.Show()
     End Sub
 End Class

@@ -85,7 +85,7 @@ Public Class Clientes
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Close()
+        Hide()
         Consultar_Clientes.Show()
     End Sub
 
@@ -94,5 +94,9 @@ Public Class Clientes
         TXT3.Text = ""
         TXT4.Text = ""
         TXT5.Text = ""
+    End Sub
+
+    Private Sub Clientes_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Panel_de_Control.Show()
     End Sub
 End Class

@@ -153,7 +153,7 @@ Public Class Ordenes
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Close()
+        Hide()
         Consultar_Orden.Show()
     End Sub
 
@@ -177,5 +177,9 @@ Public Class Ordenes
             Button1.Enabled = True
         End If
 
+    End Sub
+
+    Private Sub Ordenes_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Panel_de_Control.Show()
     End Sub
 End Class

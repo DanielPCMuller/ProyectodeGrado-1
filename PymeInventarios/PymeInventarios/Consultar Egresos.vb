@@ -58,4 +58,8 @@ Public Class Consultar_Egresos
         End If
         Conexion.Close()
     End Sub
+
+    Private Sub Consultar_Egresos_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Egresos.Show()
+    End Sub
 End Class

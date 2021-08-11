@@ -17,6 +17,11 @@ Public Class Inventario
         TXT2.Text = ""
         TXT4.Text = ""
         TXT5.Text = ""
+
+        TXT2.Enabled = False
+        TXT4.Enabled = False
+        TXT5.Enabled = False
+
         DataGridView1.Columns.Clear()
     End Sub
 
@@ -26,6 +31,8 @@ Public Class Inventario
     End Sub
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.AllowUserToAddRows = False
+
         Try
             Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
             'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
@@ -100,14 +107,29 @@ Public Class Inventario
         TXT4.Text = Precio_Venta
         TXT5.Text = Utilidad
 
-        DataGridView1.Columns.Add("Nombre_Producto", "Nombre_Producto")
-        DataGridView1.Columns.Add("Cantidad", "Cantidad")
-        DataGridView1.Columns.Add("Precio_Compra", "Precio Compra")
-        DataGridView1.Columns.Add("Porcentaje_Utilidad", "Porcentaje Utilidad")
-        DataGridView1.Columns.Add("Precio_Venta", "Precio Venta")
-        DataGridView1.Columns.Add("Utilidad", "Utilidad")
         DataGridView1.Rows.Add(CBO1.Text, TXT1.Text, TXT2.Text, TXT3.Text, TXT4.Text, TXT5.Text)
+
+        TXT2.Enabled = True
+        TXT4.Enabled = True
+        TXT5.Enabled = True
+
         Button1.Enabled = True
 
+    End Sub
+
+    Private Sub CBO1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO1.SelectedIndexChanged
+        TXT1.Text = ""
+        TXT2.Text = ""
+        TXT3.Text = ""
+        TXT4.Text = ""
+        TXT5.Text = ""
+
+        TXT2.Enabled = False
+        TXT4.Enabled = False
+        TXT5.Enabled = False
+    End Sub
+
+    Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Panel_de_Control.Show()
     End Sub
 End Class

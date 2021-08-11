@@ -21,7 +21,7 @@ Public Class Inicio_Sesion
             Conexion.Close()
             MsgBox("Bienvenido a MyEasyManage")
             Panel_de_Control.Show()
-            Close()
+            Hide()
             TXT1.Text = ""
             TXT2.Text = ""
         Else
@@ -48,12 +48,16 @@ Public Class Inicio_Sesion
             Conexion.Open()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Acceder a MyEasyManage")
-            Close()
+            Hide()
         End Try
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Close()
+        Hide()
         Recuperar_Clave.Show()
+    End Sub
+
+    Private Sub CargaSistema_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
     End Sub
 End Class

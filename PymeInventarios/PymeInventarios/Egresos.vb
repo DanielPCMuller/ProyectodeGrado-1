@@ -108,7 +108,11 @@ Public Class Egresos
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Close()
+        Hide()
         Consultar_Egresos.Show()
+    End Sub
+
+    Private Sub Egresos_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Panel_de_Control.Show()
     End Sub
 End Class

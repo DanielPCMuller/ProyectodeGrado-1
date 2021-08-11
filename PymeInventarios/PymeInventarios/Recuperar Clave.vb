@@ -53,4 +53,10 @@ Public Class Recuperar_Clave
             Inicio_Sesion.Show()
         End If
     End Sub
+
+    Private Sub Recuperar_Clave_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        Inicio_Sesion.Show()
+
+    End Sub
 End Class

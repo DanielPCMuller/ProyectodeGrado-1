@@ -75,8 +75,13 @@ Public Class Consulta_Inventarios
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Modificar_Inventario.Show()
-        Close()
+        Hide()
     End Sub
 
+    Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        Panel_de_Control.Show()
+
+    End Sub
 
 End Class

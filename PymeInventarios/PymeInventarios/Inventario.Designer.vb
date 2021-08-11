@@ -38,6 +38,12 @@ Partial Class Inventario
         Me.TXT3 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TXT2 = New System.Windows.Forms.TextBox()
@@ -95,9 +101,11 @@ Partial Class Inventario
         '
         'TXT4
         '
+        Me.TXT4.BackColor = System.Drawing.SystemColors.Window
         Me.TXT4.Enabled = False
         Me.TXT4.Location = New System.Drawing.Point(124, 135)
         Me.TXT4.Name = "TXT4"
+        Me.TXT4.ReadOnly = True
         Me.TXT4.Size = New System.Drawing.Size(134, 20)
         Me.TXT4.TabIndex = 40
         '
@@ -143,9 +151,11 @@ Partial Class Inventario
         '
         'TXT5
         '
+        Me.TXT5.BackColor = System.Drawing.SystemColors.Window
         Me.TXT5.Enabled = False
         Me.TXT5.Location = New System.Drawing.Point(124, 161)
         Me.TXT5.Name = "TXT5"
+        Me.TXT5.ReadOnly = True
         Me.TXT5.Size = New System.Drawing.Size(134, 20)
         Me.TXT5.TabIndex = 56
         '
@@ -178,11 +188,51 @@ Partial Class Inventario
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 392)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(446, 150)
         Me.DataGridView1.TabIndex = 143
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Nombre Articulo"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Cantidad"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Precio Compra"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Porcentaje Utilidad"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Precio Venta"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Utilidad"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Button5
         '
@@ -217,9 +267,11 @@ Partial Class Inventario
         '
         'TXT2
         '
+        Me.TXT2.BackColor = System.Drawing.SystemColors.Window
         Me.TXT2.Enabled = False
         Me.TXT2.Location = New System.Drawing.Point(124, 81)
         Me.TXT2.Name = "TXT2"
+        Me.TXT2.ReadOnly = True
         Me.TXT2.Size = New System.Drawing.Size(134, 20)
         Me.TXT2.TabIndex = 145
         '
@@ -286,4 +338,10 @@ Partial Class Inventario
     Friend WithEvents CBO1 As ComboBox
     Friend WithEvents TXT2 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class

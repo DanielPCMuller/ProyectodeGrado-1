@@ -87,4 +87,8 @@ Public Class Consultar_Clientes
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
+    Private Sub Consultar_Clientes_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Clientes.Show()
+    End Sub
 End Class
