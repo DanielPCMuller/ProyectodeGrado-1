@@ -85,8 +85,8 @@ Public Class Inventario
             DataGridView1.Rows.Clear()
         Catch ex As Exception
             MsgBox("Error al Registrar el Producto")
-            'Close()
-            'Panel_de_Control.Show()
+            Close()
+            Panel_de_Control.Show()
         End Try
     End Sub
 

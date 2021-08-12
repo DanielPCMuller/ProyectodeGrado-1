@@ -25,11 +25,12 @@ Public Class Ordenes
         TXT5.Text = ""
         TXT6.Text = ""
         TXT7.Text = ""
-        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
 
     End Sub
 
     Private Sub Ordenes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.AllowUserToAddRows = False
         Try
             Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
             'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
@@ -141,7 +142,13 @@ Public Class Ordenes
                 TXT6.Text = ""
                 TXT7.Text = ""
                 TXT1.Focus()
-                DataGridView1.Columns.Clear()
+                TXT2.Enabled = True
+                TXT3.Enabled = True
+                TXT4.Enabled = True
+                TXT5.Enabled = True
+                TXT6.Enabled = True
+                TXT7.Enabled = True
+                DataGridView1.Rows.Clear()
                 Button1.Enabled = False
             Catch ex As MySqlException
                 Console.WriteLine(ex.Message)
@@ -149,6 +156,7 @@ Public Class Ordenes
                 Close()
                 Panel_de_Control.Show()
             End Try
+            Button5.Enabled = True
         End If
     End Sub
 
@@ -164,18 +172,21 @@ Public Class Ordenes
             MsgBox("Inserte los Datos del Producto")
             TXT1.Focus()
         Else
-            DataGridView1.Columns.Add("Empresa_Pedido", "Empresa Pedido")
-            DataGridView1.Columns.Add("Código_Producto", "Codigo Producto")
-            DataGridView1.Columns.Add("Nombre_Producto", "Nombre Producto")
-            DataGridView1.Columns.Add("Marca Producto", "Marca Producto")
-            DataGridView1.Columns.Add("Fecha_Pedido", "Fecha Pedido")
-            DataGridView1.Columns.Add("Cantidad", "Cantidad")
-            DataGridView1.Columns.Add("Precio_Compra", "Precio Compra")
             DataGridView1.Rows.Add(TXT7.Text, TXT2.Text, TXT3.Text, TXT4.Text, DateTimePicker1.Text, TXT5.Text, TXT6.Text)
             Precio_Compra = TXT5.Text * TXT6.Text
             Console.WriteLine(Precio_Compra)
             Button1.Enabled = True
+            'TXT1.Text = ""
+            TXT2.Enabled = False
+            TXT3.Enabled = False
+            TXT4.Enabled = False
+            TXT5.Enabled = False
+            TXT6.Enabled = False
+            TXT7.Enabled = False
+            'DataGridView1.Rows.Clear()
+            Button5.Enabled = False
         End If
+
 
     End Sub
 

@@ -5,7 +5,7 @@ Public Class Consulta_Inventarios
     Dim Conexion As New MySqlConnection
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TXT1.Text = ""
-        TXT2.Text = ""
+        CBO1.Text = ""
         TXT3.Text = ""
     End Sub
 
@@ -16,8 +16,19 @@ Public Class Consulta_Inventarios
 
     Private Sub Consulta_Inventarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+            Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
+            'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
+
+            Dim Consulta As String
+            Consulta = "SELECT Marca_Producto From Productos a JOIN Producto_Inventario b on a.ID_Producto = Productos_ID_Producto"
+            Adaptador = New MySqlDataAdapter(Consulta, Conexion)
+            Datos = New DataSet
+            Datos.Tables.Add("Productos")
+            Adaptador.Fill(Datos.Tables("Productos"))
+            CBO1.DataSource = Datos.Tables("Productos")
+            CBO1.ValueMember = "Marca_Producto"
+            Conexion.Close()
 
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Consultar el Inventario")
@@ -29,7 +40,7 @@ Public Class Consulta_Inventarios
         Dim Consulta As String
         Dim Lista As Byte
 
-        If TXT1.Text & TXT2.Text & TXT3.Text = "" Then
+        If TXT1.Text & CBO1.Text & TXT3.Text = "" Then
             MsgBox("Inserte la Opción de Búsqueda del Producto en Código, Nombre o Marca")
         Else
             If TXT1.Text <> "" Then
@@ -45,17 +56,22 @@ Public Class Consulta_Inventarios
                 DataGridView1.DataMember = "inventarios"
             End If
 
-            If TXT2.Text <> "" Then
-                Consulta = "Select * From inventarios Where Marca_Articulo='" & TXT2.Text & "'"
+            If CBO1.Text <> "" Then
+                Consulta = "SELECT Codigo_Producto, Nombre_Producto, Marca_Producto, Precio_Compra 
+                            FROM Productos a JOIN Producto_Inventario b on a.ID_Producto = Productos_ID_Producto 
+                            WHERE a.Marca_Producto ='" & CBO1.Text & "'"
                 Adaptador = New MySqlDataAdapter(Consulta, Conexion)
                 Datos = New DataSet
-                Adaptador.Fill(Datos, "inventarios")
-                Lista = Datos.Tables("inventarios").Rows.Count
+                'Adaptador.Fill(Datos, "Productos")
+                'Lista = Datos.Tables("Productos").Rows.Count
+                Datos.Tables.Add("tabla")
+                Adaptador.Fill(Datos.Tables("tabla"))
+                DataGridView1.DataSource = Datos
             End If
 
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
-                DataGridView1.DataMember = "inventarios"
+                DataGridView1.DataMember = "Productos"
             End If
 
             If TXT3.Text <> "" Then
@@ -78,7 +94,7 @@ Public Class Consulta_Inventarios
         Hide()
     End Sub
 
-    Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Consulta_Inventario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
         Panel_de_Control.Show()
 

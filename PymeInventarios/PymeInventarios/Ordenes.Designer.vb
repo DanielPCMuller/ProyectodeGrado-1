@@ -39,15 +39,22 @@ Partial Class Ordenes
         Me.TXT6 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TXT3 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TXT4 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXT7 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT4 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TXT3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -215,32 +222,31 @@ Partial Class Ordenes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Artículos Solicitados"
         '
-        'Label1
+        'Label5
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(19, 63)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 13)
-        Me.Label1.TabIndex = 130
-        Me.Label1.Text = "Código del Producto"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 37)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(84, 13)
+        Me.Label5.TabIndex = 145
+        Me.Label5.Text = "Empresa Pedido"
         '
-        'Label9
+        'TXT7
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(19, 89)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(107, 13)
-        Me.Label9.TabIndex = 132
-        Me.Label9.Text = "Nombre del Producto"
+        Me.TXT7.Location = New System.Drawing.Point(127, 34)
+        Me.TXT7.Name = "TXT7"
+        Me.TXT7.Size = New System.Drawing.Size(134, 20)
+        Me.TXT7.TabIndex = 144
         '
-        'TXT3
+        'Button5
         '
-        Me.TXT3.Location = New System.Drawing.Point(127, 86)
-        Me.TXT3.Name = "TXT3"
-        Me.TXT3.Size = New System.Drawing.Size(134, 20)
-        Me.TXT3.TabIndex = 131
+        Me.Button5.Location = New System.Drawing.Point(320, 173)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(107, 34)
+        Me.Button5.TabIndex = 143
+        Me.Button5.Text = "Agregar Artículo"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -259,39 +265,83 @@ Partial Class Ordenes
         Me.TXT4.Size = New System.Drawing.Size(134, 20)
         Me.TXT4.TabIndex = 133
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(19, 89)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(107, 13)
+        Me.Label9.TabIndex = 132
+        Me.Label9.Text = "Nombre del Producto"
+        '
+        'TXT3
+        '
+        Me.TXT3.Location = New System.Drawing.Point(127, 86)
+        Me.TXT3.Name = "TXT3"
+        Me.TXT3.Size = New System.Drawing.Size(134, 20)
+        Me.TXT3.TabIndex = 131
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(19, 63)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 13)
+        Me.Label1.TabIndex = 130
+        Me.Label1.Text = "Código del Producto"
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.DataGridView1.Location = New System.Drawing.Point(25, 428)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(446, 150)
         Me.DataGridView1.TabIndex = 141
         '
-        'Button5
+        'Column1
         '
-        Me.Button5.Location = New System.Drawing.Point(320, 173)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(107, 34)
-        Me.Button5.TabIndex = 143
-        Me.Button5.Text = "Agregar Artículo"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Column1.HeaderText = "Empresa Pedido"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
-        'Label5
+        'Column2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(19, 37)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(84, 13)
-        Me.Label5.TabIndex = 145
-        Me.Label5.Text = "Empresa Pedido"
+        Me.Column2.HeaderText = "Codigo Producto"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
-        'TXT7
+        'Column3
         '
-        Me.TXT7.Location = New System.Drawing.Point(127, 34)
-        Me.TXT7.Name = "TXT7"
-        Me.TXT7.Size = New System.Drawing.Size(134, 20)
-        Me.TXT7.TabIndex = 144
+        Me.Column3.HeaderText = "Nombre producto"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Marca Producto"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Fecha Pedido"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Cantidad"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Precio Compra"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Ordenes
         '
@@ -346,4 +396,11 @@ Partial Class Ordenes
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents TXT7 As TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
 End Class

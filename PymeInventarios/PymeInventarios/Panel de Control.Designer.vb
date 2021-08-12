@@ -51,7 +51,7 @@ Partial Class Panel_de_Control
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(130, 84)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Crear Inventario"
+        Me.Button1.Text = "Añadir a Inventario"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
