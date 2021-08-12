@@ -53,7 +53,7 @@ Public Class Consultar_Egresos
             If Lista <> 0 Then
                 DataGridView1.DataSource = Datos
                 DataGridView1.DataMember = "Egresos"
-                DataGridView1.Columns.Clear()
+                'DataGridView1.Columns.Clear()
             End If
         End If
         Conexion.Close()
