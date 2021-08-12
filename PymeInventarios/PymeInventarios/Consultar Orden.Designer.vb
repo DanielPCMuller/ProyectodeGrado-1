@@ -23,7 +23,6 @@ Partial Class Consultar_Orden
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Consultar_Orden))
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -38,18 +37,9 @@ Partial Class Consultar_Orden
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(193, 390)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(122, 55)
-        Me.Button5.TabIndex = 83
-        Me.Button5.Text = "Eliminar Órden"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(449, 390)
+        Me.Button3.Location = New System.Drawing.Point(382, 390)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
         Me.Button3.TabIndex = 80
@@ -58,7 +48,7 @@ Partial Class Consultar_Orden
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(321, 390)
+        Me.Button2.Location = New System.Drawing.Point(254, 390)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(122, 55)
         Me.Button2.TabIndex = 79
@@ -67,7 +57,7 @@ Partial Class Consultar_Orden
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(65, 390)
+        Me.Button1.Location = New System.Drawing.Point(126, 390)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 55)
         Me.Button1.TabIndex = 78
@@ -94,6 +84,7 @@ Partial Class Consultar_Orden
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(36, 198)
         Me.DataGridView1.Name = "DataGridView1"
@@ -144,7 +135,6 @@ Partial Class Consultar_Orden
         Me.ClientSize = New System.Drawing.Size(630, 457)
         Me.Controls.Add(Me.TXT1)
         Me.Controls.Add(Me.CBO2)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -163,8 +153,6 @@ Partial Class Consultar_Orden
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

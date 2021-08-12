@@ -13,7 +13,9 @@ Public Class Consultar_Orden
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         DataGridView1.Columns.Clear()
         TXT1.Text = ""
-        CBO2.Text = ""
+        CBO2.Text = "Seleccione"
+        TXT1.Enabled = True
+        CBO2.Enabled = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -54,8 +56,6 @@ Public Class Consultar_Orden
             End If
 
 
-
-
             If CBO2.Text <> "" Then
                 Conexion.Open()
                 Consulta = "SELECT a.Numero_Pedido, a. Fecha_Pedido, b.Cantidad, b.Precio_Compra, c.Nombre_Empresa, d.Nombre_Producto 
@@ -83,11 +83,15 @@ Public Class Consultar_Orden
                 DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
                 Dim Columna2 As DataGridViewColumn = DataGridView1.Columns(4)
                 Columna2.DefaultCellStyle.WrapMode = DataGridViewTriState.True
-                'DataGridView1.Columns.Clear()
-
+            Else
+                MessageBox.Show("No se ha encontrado el registro")
+                DataGridView1.Columns.Clear()
             End If
 
         End If
+
+        TXT1.Enabled = True
+        CBO2.Enabled = True
     End Sub
 
     Private Sub Consultar_Orden_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,9 +99,8 @@ Public Class Consultar_Orden
             Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
             'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
-
             Dim Consulta As String
-            Consulta = "SELECT Nombre_Empresa From Empresa"
+            Consulta = "SELECT DISTINCT Nombre_Empresa From Empresa"
             Adaptador = New MySqlDataAdapter(Consulta, Conexion)
             Datos = New DataSet
             Datos.Tables.Add("Empresa")
@@ -105,21 +108,24 @@ Public Class Consultar_Orden
             CBO2.DataSource = Datos.Tables("Empresa")
             CBO2.ValueMember = "Nombre_Empresa"
             Conexion.Close()
+            CBO2.Text = "Seleccione"
+
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrán Consultar las Órdenes de Compra")
             Panel_de_Control.Show()
         End Try
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+
         If TXT1.Text = "" Then
-            MsgBox("Inserte el Código de Órden de Compra que se va a Eliminar")
-        Else
-            Proceso = New MySqlCommand("Delete From ordenes where Numero_Pedido=" & TXT1.Text & "", Conexion)
-            Proceso.ExecuteNonQuery()
-            TXT1.Focus()
-            MsgBox("Orden de Compra Eliminada")
-        End If
+                MsgBox("Inserte el Código de Órden de Compra que se va a Eliminar")
+            Else
+                Proceso = New MySqlCommand("Delete From ordenes where Numero_Pedido=" & TXT1.Text & "", Conexion)
+                Proceso.ExecuteNonQuery()
+                TXT1.Focus()
+                MsgBox("Orden de Compra Eliminada")
+            End If
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -128,5 +134,26 @@ Public Class Consultar_Orden
 
     Private Sub Consultar_Orden_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Panel_de_Control.Show()
+    End Sub
+
+    Private Sub TXT1_TextChanged(sender As Object, e As EventArgs) Handles TXT1.TextChanged
+        CBO2.Text = ""
+        If TXT1.Text = "" Then
+            CBO2.Enabled = True
+            CBO2.Text = "Seleccione"
+        Else
+            CBO2.Enabled = False
+        End If
+
+
+    End Sub
+
+    Private Sub CBO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO2.SelectedIndexChanged
+        TXT1.Text = ""
+        If CBO2.Text = "Seleccione" Then
+            TXT1.Enabled = False
+        Else
+            TXT1.Enabled = True
+        End If
     End Sub
 End Class
