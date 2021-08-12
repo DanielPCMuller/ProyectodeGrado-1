@@ -92,18 +92,16 @@ Public Class Inventario
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim Leer As MySqlDataReader
-        If TXT1.Text = "" Or TXT3.Text = "" Then
-            MsgBox("Inserte Los Datos Requeridos")
-            TXT1.Focus()
-        End If
 
         ' Traemos el precio de compra del producto
         Conexion.Open()
-        Proceso1 = New MySqlCommand("SELECT a.Precio_Compra FROM Productos_Pedido a JOIN Productos b on a.Productos_ID_Producto = b.ID_Producto WHERE b.Nombre_Producto = '" & CBO1.Text & "'", Conexion)
+        Proceso1 = New MySqlCommand("SELECT a.Precio_Compra, a.Cantidad FROM Productos_Pedido a JOIN Productos b on a.Productos_ID_Producto = b.ID_Producto WHERE b.Nombre_Producto = '" & CBO1.Text & "'", Conexion)
         Leer = Proceso1.ExecuteReader()
         Dim Guardar_Precio As String
+        Dim Guardar_Cantidad As String
         If Leer.Read = True Then
             Guardar_Precio = CStr(Leer(0))
+            Guardar_Cantidad = CStr(Leer(1))
         End If
         Leer.Close()
         Proceso1.ExecuteNonQuery()
@@ -121,16 +119,22 @@ Public Class Inventario
         Proceso2.ExecuteNonQuery()
         Conexion.Close()
 
-        TXT2.Text = Guardar_Precio
 
-        Precio_Compra = TXT2.Text
-        UtilidadPorcentaje = TXT3.Text
-        Utilidad = Precio_Compra * UtilidadPorcentaje / 100
-        Precio_Venta = Precio_Compra + Utilidad
-        TXT4.Text = Precio_Venta
-        TXT5.Text = Utilidad
+        If TXT2.Text <> "" Or TXT3.Text <> "" Then
+            TXT1.Text = Guardar_Cantidad
+            TXT2.Text = Guardar_Precio
 
-        DataGridView1.Rows.Add(CBO1.Text, TXT1.Text, TXT2.Text, TXT3.Text, TXT4.Text, TXT5.Text, Guardar_ID_Producto)
+            Precio_Compra = TXT2.Text
+            UtilidadPorcentaje = TXT3.Text
+            Utilidad = Precio_Compra * UtilidadPorcentaje / 100
+            Precio_Venta = Precio_Compra + Utilidad
+            TXT4.Text = Precio_Venta
+            TXT5.Text = Utilidad
+            DataGridView1.Rows.Add(CBO1.Text, TXT1.Text, TXT2.Text, TXT3.Text, TXT4.Text, TXT5.Text, Guardar_ID_Producto)
+        Else
+            MsgBox("Inserte Los Datos Requeridos")
+            CBO1.Focus()
+        End If
 
         TXT2.Enabled = True
         TXT4.Enabled = True

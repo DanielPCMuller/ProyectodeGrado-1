@@ -95,9 +95,7 @@ Public Class Consulta_Inventarios
     End Sub
 
     Private Sub Consulta_Inventario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-
         Panel_de_Control.Show()
-
     End Sub
 
 End Class
