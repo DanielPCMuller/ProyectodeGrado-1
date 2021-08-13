@@ -106,14 +106,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyEasyManage.exe" size="1201152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyEasyManage.exe" size="1200640">
       <assemblyIdentity name="MyEasyManage" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iJb0oCjELPNXA/Mki4Y8WRPD/pU=</dsig:DigestValue>
+        <dsig:DigestValue>6mw4zlcdQU7WCpwD1eUklLkm1PE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
