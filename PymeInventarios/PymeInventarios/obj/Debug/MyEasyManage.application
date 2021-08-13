@@ -4,14 +4,18 @@
   <description asmv2:publisher="MyEasyManage" asmv2:product="MyEasyManage" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MyEasyManage.exe.manifest" size="9707">
+    <dependentAssembly dependencyType="install" codebase="MyEasyManage.exe.manifest" size="18388">
       <assemblyIdentity name="MyEasyManage.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<<<<<<< HEAD
         <dsig:DigestValue>/gCjLxHKwxUw2Z3l2eTsQFaDI0M=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>5JsbZrGaWKEdxTwrL3QWpm+6knU=</dsig:DigestValue>
+>>>>>>> c374adb908580e867ee286d105d52aba8db2b3b6
       </hash>
     </dependentAssembly>
   </dependency>
