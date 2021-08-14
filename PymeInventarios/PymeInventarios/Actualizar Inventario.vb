@@ -69,8 +69,11 @@ Public Class Modificar_Inventario
         Proceso1 = New MySqlCommand("SELECT a.Precio_Compra, a.Cantidad FROM Productos_Pedido a JOIN Productos b on a.Productos_ID_Producto = b.ID_Producto WHERE b.Nombre_Producto = '" & CBO1.Text & "'", Conexion)
         Leer = Proceso1.ExecuteReader()
         Dim Guardar_Precio As String
+        Dim Guardar_Cantidad As String
+
         If Leer.Read = True Then
             Guardar_Precio = CStr(Leer(0))
+            Guardar_Cantidad = CStr(Leer(1))
         End If
         Leer.Close()
         Proceso1.ExecuteNonQuery()

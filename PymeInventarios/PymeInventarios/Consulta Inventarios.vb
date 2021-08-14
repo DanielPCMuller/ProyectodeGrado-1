@@ -122,21 +122,27 @@ Public Class Consulta_Inventarios
 
     Private Sub CBO1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO1.SelectedIndexChanged
         CBO2.Text = ""
-        'If CBO1.Text = "Seleccione" Then
-        '    CBO2.Enabled = True
-        '    CBO2.Text = "Seleccione"
-        'Else
-        '    CBO2.Enabled = False
-        'End If
     End Sub
 
     Private Sub CBO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO2.SelectedIndexChanged
         CBO1.Text = ""
-        'If CBO2.Text = "" Then
-        '    CBO1.Enabled = True
-        '    CBO2.Text = "Seleccione"
-        'Else
-        '    CBO1.Enabled = False
-        'End If
+    End Sub
+
+    Private Sub CBO1_KeyDown(sender As Object, e As KeyEventArgs) Handles CBO1.KeyDown
+        If CBO1.Text = "" Then
+            CBO2.Enabled = True
+            CBO2.Text = "Seleccione"
+        Else
+            CBO2.Enabled = False
+        End If
+    End Sub
+
+    Private Sub CBO2_KeyDown(sender As Object, e As KeyEventArgs) Handles CBO2.KeyDown
+        If CBO2.Text = "" Then
+            CBO1.Enabled = True
+            CBO1.Text = "Seleccione"
+        Else
+            CBO1.Enabled = False
+        End If
     End Sub
 End Class

@@ -12,11 +12,11 @@ Public Class Ventas
 
     Private Sub BorrarCliente_Click(sender As Object, e As EventArgs) Handles BorrarCliente.Click
         CBO1.Text = ""
-        TXT2.Text = ""
         TXT3.Text = ""
-        TXT7.Text = ""
-        TXT9.Text = ""
+        TXT4.Text = ""
+        TXT11.Text = ""
         TXT10.Text = ""
+        TXT9.Text = ""
         LST2.Items.Clear()
         LST3.Items.Clear()
         LST5.Items.Clear()
@@ -25,19 +25,29 @@ Public Class Ventas
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'PymeinventariosDataSet.inventarios' Puede moverla o quitarla según sea necesario.
         Try
-            Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+            Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
+            'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
             Conexion.Open()
 
             Dim Consulta As String
-            Consulta = "Select * From inventarios"
+            Consulta = "SELECT a.Nombre_Producto, b.Cantidad, b.Precio_Venta FROM Productos a JOIN Producto_Inventario b on a.ID_Producto = b.Productos_ID_Producto"
             Adaptador = New MySqlDataAdapter(Consulta, Conexion)
             Datos = New DataSet
-            Datos.Tables.Add("inventarios")
-            Adaptador.Fill(Datos.Tables("inventarios"))
-            CBO2.DataSource = Datos.Tables("inventarios")
-            CBO2.ValueMember = "Nombre_Articulo"
-            CBO3.DataSource = Datos.Tables("inventarios")
-            CBO3.ValueMember = "Precio_Venta"
+            Datos.Tables.Add("Productos")
+            Adaptador.Fill(Datos.Tables("Productos"))
+            CBO2.DataSource = Datos.Tables("Productos")
+            CBO2.ValueMember = "Nombre_Producto"
+            ''Dim Fila As DataRow = Datos.Rows(0)
+            TXT8.DataBindings.Add("Text", Datos.Tables("Productos"), "Precio_Venta")
+            TXT6.DataBindings.Add("Text", Datos.Tables("Productos"), "Cantidad")
+
+            If TXT6.Text <> "" Or TXT8.Text <> "" Then
+                Dim PrecioVenta = TXT8.Text
+                Dim Cantidad = TXT6.Text
+                Dim PrecioUnidad = PrecioVenta / Cantidad
+                TXT7.Text = PrecioUnidad
+                Console.Write(PrecioUnidad)
+            End If
 
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Registrar la Factura")
@@ -45,25 +55,25 @@ Public Class Ventas
         End Try
         TXT1.Text = Now.Date
         Num_Factura = Num_Factura + 1
-        TXT8.Text = Num_Factura
+        TXT2.Text = Num_Factura
     End Sub
 
     Private Sub Borrar_Click(sender As Object, e As EventArgs) Handles Borrar.Click
         If (LST2.SelectedIndex > -1) Then
             LST2.Items.RemoveAt(LST2.SelectedIndex)
-            TXT7.Text = ""
+            TXT11.Text = ""
         End If
 
         If (LST3.SelectedIndex > -1) Then
             LST3.Items.RemoveAt(LST3.SelectedIndex)
-            TXT7.Text = ""
+            TXT11.Text = ""
         End If
 
         If (LST5.SelectedIndex > -1) Then
             LST5.Items.RemoveAt(LST5.SelectedIndex)
-            TXT7.Text = ""
+            TXT11.Text = ""
         End If
-        TXT7.Text = ""
+        TXT11.Text = ""
     End Sub
 
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
@@ -74,38 +84,54 @@ Public Class Ventas
     Private Sub Agregar_Click(sender As Object, e As EventArgs) Handles Agregar.Click
 
         Dim Multiplicacion As Integer
-        Dim Resultado As Integer
+        'Dim Resultado As Integer
 
-        If (TXT6.Text = "") Then
-            MsgBox("Ingrese la Cantidad")
-            TXT6.Focus()
+        If TXT5.Text = "" Then
+            MsgBox("Ingrese la Cantidad", vbExclamation)
+            TXT5.Focus()
             Return
+        ElseIf CBO2.Text = "Seleccione"
+            MsgBox("Seleccione el producto", vbExclamation)
+            CBO2.Focus()
+            Return
+        ElseIf TXT5.Text > TXT6.Text
+            MsgBox("La cantidad no puede superar a la dispoible en el inventario", vbCritical)
+            TXT5.Focus()
+            Return
+        Else
+
+            Try
+                LST2.Items.Add(CBO2.Text)
+                LST3.Items.Add(TXT5.Text)
+
+                Multiplicacion = TXT5.Text * TXT7.Text
+                'Resultado = Multiplicacion
+                LST5.Items.Add(Multiplicacion)
+            Catch ex As InvalidCastException
+                Console.Write(ex.Message)
+            End Try
+
+            CBO2.Text = "Seleccione"
+            TXT5.Text = ""
+            TXT6.Text = ""
+            TXT7.Text = ""
+            TXT8.Text = ""
+
+            TXT6.Enabled = False
+            TXT8.Enabled = False
         End If
-
-        LST2.Items.Add(CBO2.Text)
-        LST3.Items.Add(TXT6.Text)
-
-        Multiplicacion = CBO3.Text * TXT6.Text
-        Resultado = Multiplicacion
-        LST5.Items.Add(Resultado)
-
-        TXT6.Text = ""
-        CBO2.Text = ""
-        CBO3.Text = ""
-
-
     End Sub
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
 
-        If CBO1.Text = "" Or TXT2.Text = "" Or TXT3.Text = "" Or TXT10.Text = "" Then
+        If CBO1.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Or TXT9.Text = "" Then
             MsgBox("Ingrese Datos en los Campos Solicitados")
             CBO1.Focus()
         End If
 
-        MontoRecibido = TXT10.Text
+        MontoRecibido = TXT9.Text
         Cambio = MontoRecibido - Total
-        TXT9.Text = Cambio.ToString()
+        TXT10.Text = Cambio.ToString()
 
 
 
@@ -126,10 +152,6 @@ Public Class Ventas
 
     End Sub
 
-    Private Sub CBO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO2.SelectedIndexChanged
-
-    End Sub
-
     Private Sub LST3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LST3.SelectedIndexChanged
 
     End Sub
@@ -143,18 +165,32 @@ Public Class Ventas
         Timer1.Start()
     End Sub
 
-    Private Sub TXT7_TextChanged(sender As Object, e As EventArgs) Handles TXT7.TextChanged
+    Private Sub TXT7_TextChanged(sender As Object, e As EventArgs) Handles TXT11.TextChanged
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         For Each item As Object In LST5.Items
             Total = Total + Convert.ToInt32(item)
-            TXT7.Text = Total.ToString()
+            TXT11.Text = Total.ToString()
         Next
     End Sub
 
     Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Panel_de_Control.Show()
+    End Sub
+
+    Private Sub TXT6_TextChanged(sender As Object, e As EventArgs) Handles TXT6.TextChanged
+        Try
+            Dim PrecioVenta = TXT8.Text
+            Dim Cantidad = TXT6.Text
+            Dim PrecioUnidad = PrecioVenta / Cantidad
+            TXT7.Text = PrecioUnidad
+        Catch ex As Exception
+            Console.Write(ex.Message)
+        End Try
+
+        TXT6.Enabled = True
+        TXT8.Enabled = True
     End Sub
 End Class

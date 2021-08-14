@@ -27,11 +27,11 @@ Partial Class Ventas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CBO1 = New System.Windows.Forms.ComboBox()
-        Me.TXT2 = New System.Windows.Forms.TextBox()
+        Me.TXT3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TXT1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TXT3 = New System.Windows.Forms.TextBox()
+        Me.TXT4 = New System.Windows.Forms.TextBox()
         Me.BorrarCliente = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -41,9 +41,9 @@ Partial Class Ventas
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TXT10 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.TXT9 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TXT10 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LST5 = New System.Windows.Forms.ListBox()
         Me.LST3 = New System.Windows.Forms.ListBox()
@@ -51,7 +51,7 @@ Partial Class Ventas
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TXT7 = New System.Windows.Forms.TextBox()
+        Me.TXT11 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Calcular = New System.Windows.Forms.Button()
         Me.Borrar = New System.Windows.Forms.Button()
@@ -59,14 +59,18 @@ Partial Class Ventas
         Me.Agregar = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TXT8 = New System.Windows.Forms.TextBox()
+        Me.TXT2 = New System.Windows.Forms.TextBox()
         Me.CBO2 = New System.Windows.Forms.ComboBox()
-        Me.CBO3 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirReciboToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TXT5 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.TXT7 = New System.Windows.Forms.TextBox()
+        Me.TXT8 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -103,12 +107,12 @@ Partial Class Ventas
         Me.CBO1.TabIndex = 3
         Me.CBO1.Text = "Seleccione"
         '
-        'TXT2
+        'TXT3
         '
-        Me.TXT2.Location = New System.Drawing.Point(445, 110)
-        Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(145, 20)
-        Me.TXT2.TabIndex = 4
+        Me.TXT3.Location = New System.Drawing.Point(445, 110)
+        Me.TXT3.Name = "TXT3"
+        Me.TXT3.Size = New System.Drawing.Size(145, 20)
+        Me.TXT3.TabIndex = 4
         '
         'Label4
         '
@@ -140,12 +144,12 @@ Partial Class Ventas
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Nombre del Cliente"
         '
-        'TXT3
+        'TXT4
         '
-        Me.TXT3.Location = New System.Drawing.Point(141, 149)
-        Me.TXT3.Name = "TXT3"
-        Me.TXT3.Size = New System.Drawing.Size(186, 20)
-        Me.TXT3.TabIndex = 7
+        Me.TXT4.Location = New System.Drawing.Point(141, 149)
+        Me.TXT4.Name = "TXT4"
+        Me.TXT4.Size = New System.Drawing.Size(186, 20)
+        Me.TXT4.TabIndex = 7
         '
         'BorrarCliente
         '
@@ -183,7 +187,7 @@ Partial Class Ventas
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(280, 233)
+        Me.Label8.Location = New System.Drawing.Point(488, 260)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 16)
         Me.Label8.TabIndex = 14
@@ -194,17 +198,19 @@ Partial Class Ventas
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(508, 234)
+        Me.Label9.Location = New System.Drawing.Point(488, 234)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(62, 16)
+        Me.Label9.Size = New System.Drawing.Size(141, 16)
         Me.Label9.TabIndex = 16
-        Me.Label9.Text = "Cantidad"
+        Me.Label9.Text = "Cantidad en Inventario"
         '
         'TXT6
         '
-        Me.TXT6.Location = New System.Drawing.Point(578, 233)
+        Me.TXT6.BackColor = System.Drawing.SystemColors.Window
+        Me.TXT6.Location = New System.Drawing.Point(635, 233)
         Me.TXT6.Name = "TXT6"
-        Me.TXT6.Size = New System.Drawing.Size(145, 20)
+        Me.TXT6.ReadOnly = True
+        Me.TXT6.Size = New System.Drawing.Size(88, 20)
         Me.TXT6.TabIndex = 15
         '
         'Label10
@@ -221,14 +227,15 @@ Partial Class Ventas
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TXT10)
-        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.TXT9)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.TXT10)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.LST5)
         Me.GroupBox1.Controls.Add(Me.LST3)
         Me.GroupBox1.Controls.Add(Me.LST2)
         Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.Agregar)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 309)
@@ -246,15 +253,15 @@ Partial Class Ventas
         Me.Button1.Text = "Calcular Venta"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TXT10
+        'TXT9
         '
-        Me.TXT10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT10.ForeColor = System.Drawing.Color.Lime
-        Me.TXT10.Location = New System.Drawing.Point(151, 227)
-        Me.TXT10.Name = "TXT10"
-        Me.TXT10.Size = New System.Drawing.Size(120, 20)
-        Me.TXT10.TabIndex = 51
-        Me.TXT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT9.ForeColor = System.Drawing.Color.Lime
+        Me.TXT9.Location = New System.Drawing.Point(151, 227)
+        Me.TXT9.Name = "TXT9"
+        Me.TXT9.Size = New System.Drawing.Size(120, 20)
+        Me.TXT9.TabIndex = 51
+        Me.TXT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
         '
@@ -267,15 +274,15 @@ Partial Class Ventas
         Me.Label15.TabIndex = 52
         Me.Label15.Text = "Monto Recibido $"
         '
-        'TXT9
+        'TXT10
         '
-        Me.TXT9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT9.ForeColor = System.Drawing.Color.Red
-        Me.TXT9.Location = New System.Drawing.Point(363, 227)
-        Me.TXT9.Name = "TXT9"
-        Me.TXT9.Size = New System.Drawing.Size(120, 20)
-        Me.TXT9.TabIndex = 49
-        Me.TXT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT10.ForeColor = System.Drawing.Color.Red
+        Me.TXT10.Location = New System.Drawing.Point(363, 227)
+        Me.TXT10.Name = "TXT10"
+        Me.TXT10.Size = New System.Drawing.Size(120, 20)
+        Me.TXT10.TabIndex = 49
+        Me.TXT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -345,15 +352,15 @@ Partial Class Ventas
         Me.Label14.TabIndex = 33
         Me.Label14.Text = "Cantidad"
         '
-        'TXT7
+        'TXT11
         '
-        Me.TXT7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT7.ForeColor = System.Drawing.Color.Blue
-        Me.TXT7.Location = New System.Drawing.Point(597, 536)
-        Me.TXT7.Name = "TXT7"
-        Me.TXT7.Size = New System.Drawing.Size(120, 20)
-        Me.TXT7.TabIndex = 29
-        Me.TXT7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT11.ForeColor = System.Drawing.Color.Blue
+        Me.TXT11.Location = New System.Drawing.Point(597, 536)
+        Me.TXT11.Name = "TXT11"
+        Me.TXT11.Size = New System.Drawing.Size(120, 20)
+        Me.TXT11.TabIndex = 29
+        Me.TXT11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label17
         '
@@ -395,7 +402,7 @@ Partial Class Ventas
         '
         'Agregar
         '
-        Me.Agregar.Location = New System.Drawing.Point(78, 586)
+        Me.Agregar.Location = New System.Drawing.Point(557, 44)
         Me.Agregar.Name = "Agregar"
         Me.Agregar.Size = New System.Drawing.Size(145, 32)
         Me.Agregar.TabIndex = 24
@@ -424,33 +431,23 @@ Partial Class Ventas
         Me.Label12.TabIndex = 27
         Me.Label12.Text = "Factura de Venta No."
         '
-        'TXT8
+        'TXT2
         '
-        Me.TXT8.Location = New System.Drawing.Point(592, 65)
-        Me.TXT8.Name = "TXT8"
-        Me.TXT8.Size = New System.Drawing.Size(145, 20)
-        Me.TXT8.TabIndex = 26
-        Me.TXT8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT2.Location = New System.Drawing.Point(592, 65)
+        Me.TXT2.Name = "TXT2"
+        Me.TXT2.Size = New System.Drawing.Size(145, 20)
+        Me.TXT2.TabIndex = 26
+        Me.TXT2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CBO2
         '
         Me.CBO2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.CBO2.FormattingEnabled = True
-        Me.CBO2.Location = New System.Drawing.Point(96, 230)
+        Me.CBO2.Location = New System.Drawing.Point(79, 231)
         Me.CBO2.Name = "CBO2"
-        Me.CBO2.Size = New System.Drawing.Size(179, 21)
+        Me.CBO2.Size = New System.Drawing.Size(135, 21)
         Me.CBO2.TabIndex = 28
         Me.CBO2.Text = "Seleccione"
-        '
-        'CBO3
-        '
-        Me.CBO3.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.CBO3.FormattingEnabled = True
-        Me.CBO3.Location = New System.Drawing.Point(339, 232)
-        Me.CBO3.Name = "CBO3"
-        Me.CBO3.Size = New System.Drawing.Size(166, 21)
-        Me.CBO3.TabIndex = 29
-        Me.CBO3.Text = "Seleccione"
         '
         'MenuStrip1
         '
@@ -487,19 +484,67 @@ Partial Class Ventas
         '
         Me.Timer1.Interval = 1000
         '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Location = New System.Drawing.Point(243, 234)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(62, 16)
+        Me.Label18.TabIndex = 40
+        Me.Label18.Text = "Cantidad"
+        '
+        'TXT5
+        '
+        Me.TXT5.Location = New System.Drawing.Point(310, 232)
+        Me.TXT5.Name = "TXT5"
+        Me.TXT5.Size = New System.Drawing.Size(88, 20)
+        Me.TXT5.TabIndex = 39
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(211, 262)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(94, 16)
+        Me.Label19.TabIndex = 42
+        Me.Label19.Text = "Precio Unidad"
+        '
+        'TXT7
+        '
+        Me.TXT7.Location = New System.Drawing.Point(310, 261)
+        Me.TXT7.Name = "TXT7"
+        Me.TXT7.Size = New System.Drawing.Size(88, 20)
+        Me.TXT7.TabIndex = 41
+        '
+        'TXT8
+        '
+        Me.TXT8.BackColor = System.Drawing.SystemColors.Window
+        Me.TXT8.Location = New System.Drawing.Point(635, 261)
+        Me.TXT8.Name = "TXT8"
+        Me.TXT8.ReadOnly = True
+        Me.TXT8.Size = New System.Drawing.Size(88, 20)
+        Me.TXT8.TabIndex = 43
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 630)
-        Me.Controls.Add(Me.CBO3)
+        Me.Controls.Add(Me.TXT8)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.TXT7)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TXT5)
         Me.Controls.Add(Me.CBO2)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.TXT8)
+        Me.Controls.Add(Me.TXT2)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Agregar)
         Me.Controls.Add(Me.Salir)
-        Me.Controls.Add(Me.TXT7)
+        Me.Controls.Add(Me.TXT11)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Borrar)
         Me.Controls.Add(Me.Calcular)
@@ -512,10 +557,10 @@ Partial Class Ventas
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BorrarCliente)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TXT3)
+        Me.Controls.Add(Me.TXT4)
         Me.Controls.Add(Me.TXT1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TXT2)
+        Me.Controls.Add(Me.TXT3)
         Me.Controls.Add(Me.CBO1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -536,11 +581,11 @@ Partial Class Ventas
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents CBO1 As ComboBox
-    Friend WithEvents TXT2 As TextBox
+    Friend WithEvents TXT3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TXT1 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TXT3 As TextBox
+    Friend WithEvents TXT4 As TextBox
     Friend WithEvents BorrarCliente As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
@@ -555,9 +600,9 @@ Partial Class Ventas
     Friend WithEvents Agregar As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TXT8 As TextBox
+    Friend WithEvents TXT2 As TextBox
     Friend WithEvents CBO2 As ComboBox
-    Friend WithEvents TXT7 As TextBox
+    Friend WithEvents TXT11 As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label14 As Label
@@ -565,15 +610,19 @@ Partial Class Ventas
     Friend WithEvents LST5 As ListBox
     Friend WithEvents LST3 As ListBox
     Friend WithEvents LST2 As ListBox
-    Friend WithEvents CBO3 As ComboBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReciboToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents TXT10 As TextBox
-    Friend WithEvents Label15 As Label
     Friend WithEvents TXT9 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TXT10 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TXT8 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents TXT7 As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TXT5 As TextBox
 End Class

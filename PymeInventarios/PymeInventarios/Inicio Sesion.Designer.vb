@@ -41,7 +41,7 @@ Partial Class Inicio_Sesion
         Me.Button2.Location = New System.Drawing.Point(152, 224)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -51,7 +51,7 @@ Partial Class Inicio_Sesion
         Me.TXT2.Name = "TXT2"
         Me.TXT2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXT2.Size = New System.Drawing.Size(100, 20)
-        Me.TXT2.TabIndex = 15
+        Me.TXT2.TabIndex = 1
         '
         'Label3
         '
@@ -89,7 +89,7 @@ Partial Class Inicio_Sesion
         Me.Button1.Location = New System.Drawing.Point(61, 224)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -108,7 +108,7 @@ Partial Class Inicio_Sesion
         Me.TXT1.Location = New System.Drawing.Point(153, 140)
         Me.TXT1.Name = "TXT1"
         Me.TXT1.Size = New System.Drawing.Size(100, 20)
-        Me.TXT1.TabIndex = 9
+        Me.TXT1.TabIndex = 0
         '
         'LinkLabel1
         '
@@ -116,7 +116,7 @@ Partial Class Inicio_Sesion
         Me.LinkLabel1.Location = New System.Drawing.Point(38, 198)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(106, 13)
-        Me.LinkLabel1.TabIndex = 17
+        Me.LinkLabel1.TabIndex = 3
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Crear Usuario Nuevo"
         '
@@ -126,7 +126,7 @@ Partial Class Inicio_Sesion
         Me.LinkLabel2.Location = New System.Drawing.Point(150, 198)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(114, 13)
-        Me.LinkLabel2.TabIndex = 18
+        Me.LinkLabel2.TabIndex = 4
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Recuperar Contraseña"
         '
