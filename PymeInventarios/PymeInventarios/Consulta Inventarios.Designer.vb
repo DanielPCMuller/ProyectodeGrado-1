@@ -30,7 +30,6 @@ Partial Class Consulta_Inventarios
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.CBO1 = New System.Windows.Forms.ComboBox()
         Me.CBO2 = New System.Windows.Forms.ComboBox()
@@ -79,7 +78,7 @@ Partial Class Consulta_Inventarios
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(80, 432)
+        Me.Button1.Location = New System.Drawing.Point(126, 433)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 55)
         Me.Button1.TabIndex = 64
@@ -88,7 +87,7 @@ Partial Class Consulta_Inventarios
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(336, 432)
+        Me.Button2.Location = New System.Drawing.Point(254, 433)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(122, 55)
         Me.Button2.TabIndex = 65
@@ -104,18 +103,9 @@ Partial Class Consulta_Inventarios
         Me.Label4.TabIndex = 67
         Me.Label4.Text = "Búsqueda Por Nombre"
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(208, 432)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(122, 55)
-        Me.Button4.TabIndex = 69
-        Me.Button4.Text = "Actualizar Productos "
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(464, 432)
+        Me.Button3.Location = New System.Drawing.Point(382, 433)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(122, 55)
         Me.Button3.TabIndex = 66
@@ -145,7 +135,6 @@ Partial Class Consulta_Inventarios
         Me.ClientSize = New System.Drawing.Size(646, 509)
         Me.Controls.Add(Me.CBO2)
         Me.Controls.Add(Me.CBO1)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -172,7 +161,6 @@ Partial Class Consulta_Inventarios
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents CBO1 As ComboBox
     Friend WithEvents CBO2 As ComboBox

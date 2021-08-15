@@ -170,12 +170,6 @@
     <Compile Include="Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Actualizar Inventario.Designer.vb">
-      <DependentUpon>Actualizar Inventario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Actualizar Inventario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -221,22 +215,10 @@
     <Compile Include="Reporte Egresos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte Ordenes.Designer.vb">
-      <DependentUpon>Reporte Ordenes.vb</DependentUpon>
+    <Compile Include="Reporte Ordenes Compra.Designer.vb">
+      <DependentUpon>Reporte Ordenes Compra.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reporte Ordenes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reporte Productos.Designer.vb">
-      <DependentUpon>Reporte Productos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte Productos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reporte Ventas.Designer.vb">
-      <DependentUpon>Reporte Ventas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte Ventas.vb">
+    <Compile Include="Reporte Ordenes Compra.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes.Designer.vb">
@@ -283,9 +265,6 @@
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Actualizar Inventario.resx">
-      <DependentUpon>Actualizar Inventario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -304,25 +283,15 @@
     <EmbeddedResource Include="Recuperar Clave.resx">
       <DependentUpon>Recuperar Clave.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Egresos.rdlc" />
     <EmbeddedResource Include="Reporte Egresos.resx">
       <DependentUpon>Reporte Egresos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Orden.rdlc" />
-    <EmbeddedResource Include="Reporte Ordenes.resx">
-      <DependentUpon>Reporte Ordenes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Productos.rdlc" />
-    <EmbeddedResource Include="Reporte Productos.resx">
-      <DependentUpon>Reporte Productos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Ventas.resx">
-      <DependentUpon>Reporte Ventas.vb</DependentUpon>
+    <EmbeddedResource Include="Reporte Ordenes Compra.resx">
+      <DependentUpon>Reporte Ordenes Compra.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.rdlc" />
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>

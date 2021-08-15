@@ -4,6 +4,7 @@ Public Class Inventario
     Dim Proceso As New MySqlCommand
     Dim Proceso1 As New MySqlCommand
     Dim Proceso2 As New MySqlCommand
+    Dim Proceso3 As New MySqlCommand
     Dim Precio_Compra As Double
     Dim Precio_Venta As Double
     Dim Utilidad As Integer
@@ -48,7 +49,6 @@ Public Class Inventario
             Adaptador.Fill(Datos.Tables("Productos"))
             CBO1.DataSource = Datos.Tables("Productos")
             CBO1.ValueMember = "Nombre_Producto"
-
             Conexion.Close()
         Catch ex As Exception
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Ingresar Productos")
@@ -78,6 +78,8 @@ Public Class Inventario
                 Proceso.ExecuteNonQuery()
 
             Next
+
+
 
             Conexion.Close()
             CBO1.Focus()

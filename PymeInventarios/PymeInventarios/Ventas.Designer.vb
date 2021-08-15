@@ -49,14 +49,13 @@ Partial Class Ventas
         Me.LST3 = New System.Windows.Forms.ListBox()
         Me.LST2 = New System.Windows.Forms.ListBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Agregar = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TXT11 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Calcular = New System.Windows.Forms.Button()
-        Me.Borrar = New System.Windows.Forms.Button()
+        Me.Guardar_Venta = New System.Windows.Forms.Button()
         Me.Salir = New System.Windows.Forms.Button()
-        Me.Agregar = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TXT2 = New System.Windows.Forms.TextBox()
@@ -127,8 +126,10 @@ Partial Class Ventas
         '
         'TXT1
         '
+        Me.TXT1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TXT1.Location = New System.Drawing.Point(592, 39)
         Me.TXT1.Name = "TXT1"
+        Me.TXT1.ReadOnly = True
         Me.TXT1.Size = New System.Drawing.Size(145, 20)
         Me.TXT1.TabIndex = 6
         Me.TXT1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -153,7 +154,7 @@ Partial Class Ventas
         '
         'BorrarCliente
         '
-        Me.BorrarCliente.Location = New System.Drawing.Point(578, 150)
+        Me.BorrarCliente.Location = New System.Drawing.Point(378, 586)
         Me.BorrarCliente.Name = "BorrarCliente"
         Me.BorrarCliente.Size = New System.Drawing.Size(145, 32)
         Me.BorrarCliente.TabIndex = 9
@@ -256,7 +257,7 @@ Partial Class Ventas
         'TXT9
         '
         Me.TXT9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT9.ForeColor = System.Drawing.Color.Lime
+        Me.TXT9.ForeColor = System.Drawing.Color.ForestGreen
         Me.TXT9.Location = New System.Drawing.Point(151, 227)
         Me.TXT9.Name = "TXT9"
         Me.TXT9.Size = New System.Drawing.Size(120, 20)
@@ -276,10 +277,12 @@ Partial Class Ventas
         '
         'TXT10
         '
+        Me.TXT10.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TXT10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT10.ForeColor = System.Drawing.Color.Red
         Me.TXT10.Location = New System.Drawing.Point(363, 227)
         Me.TXT10.Name = "TXT10"
+        Me.TXT10.ReadOnly = True
         Me.TXT10.Size = New System.Drawing.Size(120, 20)
         Me.TXT10.TabIndex = 49
         Me.TXT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -330,6 +333,15 @@ Partial Class Ventas
         Me.Label16.TabIndex = 37
         Me.Label16.Text = "SubTotal $"
         '
+        'Agregar
+        '
+        Me.Agregar.Location = New System.Drawing.Point(557, 44)
+        Me.Agregar.Name = "Agregar"
+        Me.Agregar.Size = New System.Drawing.Size(145, 32)
+        Me.Agregar.TabIndex = 24
+        Me.Agregar.Text = "Agregar Productos"
+        Me.Agregar.UseVisualStyleBackColor = True
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -354,10 +366,12 @@ Partial Class Ventas
         '
         'TXT11
         '
+        Me.TXT11.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TXT11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT11.ForeColor = System.Drawing.Color.Blue
         Me.TXT11.Location = New System.Drawing.Point(597, 536)
         Me.TXT11.Name = "TXT11"
+        Me.TXT11.ReadOnly = True
         Me.TXT11.Size = New System.Drawing.Size(120, 20)
         Me.TXT11.TabIndex = 29
         Me.TXT11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -373,23 +387,14 @@ Partial Class Ventas
         Me.Label17.TabIndex = 38
         Me.Label17.Text = "Total Venta $"
         '
-        'Calcular
+        'Guardar_Venta
         '
-        Me.Calcular.Location = New System.Drawing.Point(229, 586)
-        Me.Calcular.Name = "Calcular"
-        Me.Calcular.Size = New System.Drawing.Size(145, 32)
-        Me.Calcular.TabIndex = 19
-        Me.Calcular.Text = "Guardar Venta"
-        Me.Calcular.UseVisualStyleBackColor = True
-        '
-        'Borrar
-        '
-        Me.Borrar.Location = New System.Drawing.Point(377, 586)
-        Me.Borrar.Name = "Borrar"
-        Me.Borrar.Size = New System.Drawing.Size(145, 32)
-        Me.Borrar.TabIndex = 20
-        Me.Borrar.Text = "Borrar Artículos"
-        Me.Borrar.UseVisualStyleBackColor = True
+        Me.Guardar_Venta.Location = New System.Drawing.Point(229, 586)
+        Me.Guardar_Venta.Name = "Guardar_Venta"
+        Me.Guardar_Venta.Size = New System.Drawing.Size(145, 32)
+        Me.Guardar_Venta.TabIndex = 19
+        Me.Guardar_Venta.Text = "Guardar Venta"
+        Me.Guardar_Venta.UseVisualStyleBackColor = True
         '
         'Salir
         '
@@ -397,17 +402,8 @@ Partial Class Ventas
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(145, 32)
         Me.Salir.TabIndex = 21
-        Me.Salir.Text = "Salir"
+        Me.Salir.Text = "Atrás"
         Me.Salir.UseVisualStyleBackColor = True
-        '
-        'Agregar
-        '
-        Me.Agregar.Location = New System.Drawing.Point(557, 44)
-        Me.Agregar.Name = "Agregar"
-        Me.Agregar.Size = New System.Drawing.Size(145, 32)
-        Me.Agregar.TabIndex = 24
-        Me.Agregar.Text = "Agregar Productos"
-        Me.Agregar.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -427,14 +423,16 @@ Partial Class Ventas
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(440, 66)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(134, 16)
+        Me.Label12.Size = New System.Drawing.Size(133, 16)
         Me.Label12.TabIndex = 27
-        Me.Label12.Text = "Factura de Venta No."
+        Me.Label12.Text = "Recibo de Venta No."
         '
         'TXT2
         '
+        Me.TXT2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TXT2.Location = New System.Drawing.Point(592, 65)
         Me.TXT2.Name = "TXT2"
+        Me.TXT2.ReadOnly = True
         Me.TXT2.Size = New System.Drawing.Size(145, 20)
         Me.TXT2.TabIndex = 26
         Me.TXT2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -515,8 +513,10 @@ Partial Class Ventas
         '
         'TXT7
         '
+        Me.TXT7.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TXT7.Location = New System.Drawing.Point(310, 261)
         Me.TXT7.Name = "TXT7"
+        Me.TXT7.ReadOnly = True
         Me.TXT7.Size = New System.Drawing.Size(88, 20)
         Me.TXT7.TabIndex = 41
         '
@@ -546,8 +546,7 @@ Partial Class Ventas
         Me.Controls.Add(Me.Salir)
         Me.Controls.Add(Me.TXT11)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Borrar)
-        Me.Controls.Add(Me.Calcular)
+        Me.Controls.Add(Me.Guardar_Venta)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -594,8 +593,7 @@ Partial Class Ventas
     Friend WithEvents TXT6 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Calcular As Button
-    Friend WithEvents Borrar As Button
+    Friend WithEvents Guardar_Venta As Button
     Friend WithEvents Salir As Button
     Friend WithEvents Agregar As Button
     Friend WithEvents Label11 As Label

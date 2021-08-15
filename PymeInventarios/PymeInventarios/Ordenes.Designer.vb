@@ -28,7 +28,6 @@ Partial Class Ordenes
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TXT2 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,6 +54,7 @@ Partial Class Ordenes
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CBO1 = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,13 +110,6 @@ Partial Class Ordenes
         Me.Label4.Size = New System.Drawing.Size(88, 13)
         Me.Label4.TabIndex = 127
         Me.Label4.Text = "Fecha de Pedido"
-        '
-        'TXT2
-        '
-        Me.TXT2.Location = New System.Drawing.Point(127, 60)
-        Me.TXT2.Name = "TXT2"
-        Me.TXT2.Size = New System.Drawing.Size(134, 20)
-        Me.TXT2.TabIndex = 126
         '
         'Button2
         '
@@ -200,6 +193,7 @@ Partial Class Ordenes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CBO1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.TXT7)
         Me.GroupBox1.Controls.Add(Me.Button5)
@@ -213,7 +207,6 @@ Partial Class Ordenes
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TXT2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Location = New System.Drawing.Point(25, 192)
         Me.GroupBox1.Name = "GroupBox1"
@@ -343,6 +336,14 @@ Partial Class Ordenes
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         '
+        'CBO1
+        '
+        Me.CBO1.FormattingEnabled = True
+        Me.CBO1.Location = New System.Drawing.Point(127, 60)
+        Me.CBO1.Name = "CBO1"
+        Me.CBO1.Size = New System.Drawing.Size(134, 21)
+        Me.CBO1.TabIndex = 146
+        '
         'Ordenes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,7 +377,6 @@ Partial Class Ordenes
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TXT2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -403,4 +403,5 @@ Partial Class Ordenes
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents CBO1 As ComboBox
 End Class

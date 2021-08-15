@@ -26,7 +26,6 @@ Partial Class Reportes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -68,22 +67,13 @@ Partial Class Reportes
         Me.Button2.Text = "Órdenes de Compra"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(12, 106)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(122, 55)
-        Me.Button3.TabIndex = 74
-        Me.Button3.Text = "Productos"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(140, 106)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(122, 55)
         Me.Button5.TabIndex = 75
-        Me.Button5.Text = "Salir"
+        Me.Button5.Text = "Atrás"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Reportes
@@ -92,7 +82,6 @@ Partial Class Reportes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(401, 173)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
@@ -110,6 +99,5 @@ Partial Class Reportes
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button5 As Button
 End Class

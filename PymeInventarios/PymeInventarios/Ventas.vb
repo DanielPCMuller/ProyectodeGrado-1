@@ -5,21 +5,29 @@ Public Class Ventas
     Dim Adaptador As New MySqlDataAdapter
     Dim Datos As New DataSet
     Dim Num_Factura As Integer
-    Dim Item As Integer
-    Dim Total As Integer
-    Dim Cambio As Integer
-    Dim MontoRecibido As Integer
+    'Dim Item As Integer
+    Dim Total As Double
+    Dim Cambio As Double
+    Dim MontoRecibido As Double
+    Dim Cantidad As Integer
+    Dim Cantidades As ArrayList = New ArrayList()
+    Dim CantidadesNuevas As ArrayList = New ArrayList()
 
     Private Sub BorrarCliente_Click(sender As Object, e As EventArgs) Handles BorrarCliente.Click
         CBO1.Text = ""
         TXT3.Text = ""
         TXT4.Text = ""
+        TXT5.Text = ""
+        TXT6.Text = ""
+        TXT7.Text = ""
+        TXT8.Text = ""
         TXT11.Text = ""
         TXT10.Text = ""
         TXT9.Text = ""
         LST2.Items.Clear()
         LST3.Items.Clear()
         LST5.Items.Clear()
+        Cantidades.Clear()
     End Sub
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -46,7 +54,7 @@ Public Class Ventas
                 Dim Cantidad = TXT6.Text
                 Dim PrecioUnidad = PrecioVenta / Cantidad
                 TXT7.Text = PrecioUnidad
-                Console.Write(PrecioUnidad)
+                'Console.Write(PrecioUnidad)
             End If
 
         Catch ex As Exception
@@ -58,24 +66,6 @@ Public Class Ventas
         TXT2.Text = Num_Factura
     End Sub
 
-    Private Sub Borrar_Click(sender As Object, e As EventArgs) Handles Borrar.Click
-        If (LST2.SelectedIndex > -1) Then
-            LST2.Items.RemoveAt(LST2.SelectedIndex)
-            TXT11.Text = ""
-        End If
-
-        If (LST3.SelectedIndex > -1) Then
-            LST3.Items.RemoveAt(LST3.SelectedIndex)
-            TXT11.Text = ""
-        End If
-
-        If (LST5.SelectedIndex > -1) Then
-            LST5.Items.RemoveAt(LST5.SelectedIndex)
-            TXT11.Text = ""
-        End If
-        TXT11.Text = ""
-    End Sub
-
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
         Close()
         Panel_de_Control.Show()
@@ -83,55 +73,113 @@ Public Class Ventas
 
     Private Sub Agregar_Click(sender As Object, e As EventArgs) Handles Agregar.Click
 
-        Dim Multiplicacion As Integer
-        'Dim Resultado As Integer
+        Dim Multiplicacion As Double
+        Dim CantidadInventario As Integer
+        Dim Resultado As Double
+        Dim Existe As Boolean = False
+
+
+
+        If TXT5.Text <> "" Then
+            Cantidad = TXT5.Text
+            CantidadInventario = TXT6.Text
+            Cantidades.Add(CantidadInventario)
+            Console.WriteLine(Cantidades)
+        End If
+
 
         If TXT5.Text = "" Then
             MsgBox("Ingrese la Cantidad", vbExclamation)
             TXT5.Focus()
             Return
-        ElseIf CBO2.Text = "Seleccione"
+
+        ElseIf CBO2.Text = "Seleccione" Then
             MsgBox("Seleccione el producto", vbExclamation)
             CBO2.Focus()
             Return
-        ElseIf TXT5.Text > TXT6.Text
-            MsgBox("La cantidad no puede superar a la dispoible en el inventario", vbCritical)
+        ElseIf Cantidad > CantidadInventario Then
+            MsgBox("La cantidad no puede superar a la disponible en el inventario", vbCritical)
             TXT5.Focus()
             Return
+
         Else
-
             Try
-                LST2.Items.Add(CBO2.Text)
-                LST3.Items.Add(TXT5.Text)
+                For Each item As String In LST2.Items
+                    'Console.WriteLine(LST2.GetItemText(item))
+                    If item.Contains(CBO2.Text) Then
+                        Existe = True
+                        MsgBox("El Producto ya ha sido agregado", vbExclamation)
+                    End If
+                Next
 
-                Multiplicacion = TXT5.Text * TXT7.Text
-                'Resultado = Multiplicacion
-                LST5.Items.Add(Multiplicacion)
+                If Existe = False Then
+
+                    LST2.Items.Add(CBO2.Text)
+                    LST3.Items.Add(TXT5.Text)
+
+                    Multiplicacion = TXT5.Text * TXT7.Text
+                    Resultado = Multiplicacion
+                    LST5.Items.Add(Multiplicacion)
+                End If
             Catch ex As InvalidCastException
                 Console.Write(ex.Message)
             End Try
 
+            Total = 0
+
+            For Each item As Object In LST5.Items
+                Total = Total + Convert.ToInt32(item)
+                TXT11.Text = Total.ToString()
+            Next
+
             CBO2.Text = "Seleccione"
             TXT5.Text = ""
-            TXT6.Text = ""
+            'TXT6.Text = ""
             TXT7.Text = ""
             TXT8.Text = ""
 
             TXT6.Enabled = False
             TXT8.Enabled = False
+
+
         End If
     End Sub
 
-    Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
+    Private Sub Guardar_Venta_Click(sender As Object, e As EventArgs) Handles Guardar_Venta.Click
 
-        If CBO1.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Or TXT9.Text = "" Then
+        'Dim Cantidad_Actual As Integer
+        'Dim Cantidad_Nueva As Integer
+        Dim Elemento As Integer
+        Dim Tamanio As Integer
+        Dim Contador As Integer = 0
+
+        If CBO1.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Then
             MsgBox("Ingrese Datos en los Campos Solicitados")
-            CBO1.Focus()
+            TXT3.Focus()
         End If
 
-        MontoRecibido = TXT9.Text
-        Cambio = MontoRecibido - Total
-        TXT10.Text = Cambio.ToString()
+        Tamanio = LST3.Items.Count()
+
+        For Each item As Object In LST3.Items
+            Contador = Contador + 1
+            For Each Elemento In Cantidades
+                Elemento = Elemento - Convert.ToInt32(item)
+                If Contador = Tamanio Then
+                    CantidadesNuevas.Add(Elemento)
+                    Exit For
+                End If
+            Next
+
+        Next
+        For Each Elemento2 As String In CantidadesNuevas
+            Console.WriteLine(Elemento2)
+        Next
+
+        'If TXT6.Text <> "" Then
+        'Cantidad_Actual = TXT6.Text
+        'Cantidad_Nueva = Cantidad_Actual - Cantidad
+        'Console.WriteLine(Cantidad_Nueva.ToString)
+        'End If
 
 
 
@@ -170,10 +218,32 @@ Public Class Ventas
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        For Each item As Object In LST5.Items
-            Total = Total + Convert.ToInt32(item)
-            TXT11.Text = Total.ToString()
+
+        Dim Monto As Double
+        Dim Costo As Double
+
+        If TXT9.Text <> "" Then
+            Monto = TXT9.Text
+            Costo = TXT11.Text
+        End If
+
+        If TXT9.Text = "" Then
+            MsgBox("Inserte el Monto Recibido", vbEmpty)
+            TXT9.Focus()
+        ElseIf Monto > Costo Then
+
+
+            MontoRecibido = TXT9.Text
+            Cambio = MontoRecibido - Total
+            TXT10.Text = Cambio.ToString()
+        Else
+            MsgBox("El Monto Recibido debe ser mayor al total de la venta", vbExclamation)
+        End If
+
+        For Each Elemento As String In Cantidades
+            Console.WriteLine(Elemento)
         Next
+
     End Sub
 
     Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

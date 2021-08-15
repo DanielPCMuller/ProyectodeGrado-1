@@ -75,6 +75,17 @@ Namespace My
                 Return CType(Me("bynejs3dk0uzuzbn2surConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=remotemysql.com;user id=8S2KFbGuCG;password=hJgny67Qbs;database=8S2KFbGuCG"& _ 
+            "")>  _
+        Public ReadOnly Property _8S2KFbGuCGConnectionString() As String
+            Get
+                Return CType(Me("_8S2KFbGuCGConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

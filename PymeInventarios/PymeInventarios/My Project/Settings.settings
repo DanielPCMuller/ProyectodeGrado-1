@@ -18,5 +18,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com;user id=ucv0u4lxjvhpcjog;password=hQ8fhikLVvzPAU6RIkpe;persistsecurityinfo=True;database=bynejs3dk0uzuzbn2sur</Value>
     </Setting>
+    <Setting Name="_8S2KFbGuCGConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=remotemysql.com;user id=8S2KFbGuCG;password=hJgny67Qbs;database=8S2KFbGuCG&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=remotemysql.com;user id=8S2KFbGuCG;password=hJgny67Qbs;database=8S2KFbGuCG</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
