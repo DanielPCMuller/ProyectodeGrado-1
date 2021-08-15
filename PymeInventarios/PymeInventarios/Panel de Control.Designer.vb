@@ -34,7 +34,6 @@ Partial Class Panel_de_Control
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeMyEasyManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
@@ -75,9 +74,9 @@ Partial Class Panel_de_Control
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button3.Location = New System.Drawing.Point(472, 27)
+        Me.Button3.Location = New System.Drawing.Point(439, 107)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(97, 74)
+        Me.Button3.Size = New System.Drawing.Size(130, 84)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Cerrar Sesión"
         Me.Button3.UseVisualStyleBackColor = False
@@ -175,20 +174,6 @@ Partial Class Panel_de_Control
         Me.AcercaDeMyEasyManageToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
         Me.AcercaDeMyEasyManageToolStripMenuItem.Text = "Acerca de MyEasyManage"
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.DarkOrchid
-        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(439, 107)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(130, 84)
-        Me.Button5.TabIndex = 12
-        Me.Button5.Text = "Reportes"
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -219,7 +204,6 @@ Partial Class Panel_de_Control
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(607, 299)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
@@ -253,7 +237,6 @@ Partial Class Panel_de_Control
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeMyEasyManageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
 End Class

@@ -29,7 +29,6 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.exe
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.xml
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.pdb
-C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reportes.resources
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
@@ -43,7 +42,6 @@ C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInvent
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Egresos.resources
 C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\bin\Debug\MyEasyManage.exe.config
 C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.exe
 C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.xml
@@ -83,4 +81,3 @@ C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeIn
 C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.exe.manifest
 C:\Users\Josue-D\Documents\MyEasyManage\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.application
 C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Inventario.resources
-C:\Users\Daniel PC\Documents\GitHub\ProyectodeGrado-1\PymeInventarios\PymeInventarios\obj\Debug\MyEasyManage.Reporte_Ordenes_Compra.resources

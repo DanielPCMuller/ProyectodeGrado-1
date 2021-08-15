@@ -51,10 +51,7 @@ Public Class Panel_de_Control
         Egresos.Show()
     End Sub
 
-    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
-        Hide()
-        Reportes.Show()
-    End Sub
+
 
     Private Sub Invetario_Closing(Sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Inicio_Sesion.Show()

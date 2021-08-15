@@ -209,24 +209,6 @@
     <Compile Include="Recuperar Clave.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte Egresos.Designer.vb">
-      <DependentUpon>Reporte Egresos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte Egresos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reporte Ordenes Compra.Designer.vb">
-      <DependentUpon>Reporte Ordenes Compra.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte Ordenes Compra.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes.Designer.vb">
-      <DependentUpon>Reportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ventas.Designer.vb">
       <DependentUpon>Ventas.vb</DependentUpon>
     </Compile>
@@ -282,15 +264,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recuperar Clave.resx">
       <DependentUpon>Recuperar Clave.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Egresos.resx">
-      <DependentUpon>Reporte Egresos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporte Ordenes Compra.resx">
-      <DependentUpon>Reporte Ordenes Compra.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>
