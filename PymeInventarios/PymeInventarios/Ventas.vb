@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Ventas
-    Dim Conexion As New MySqlConnection
+    Dim ConexionVentas As New MySqlConnection
     Dim Proceso As New MySqlCommand
     Dim Adaptador As New MySqlDataAdapter
     Dim Datos As New DataSet
@@ -11,12 +11,10 @@ Public Class Ventas
     Dim MontoRecibido As Double
     Dim Cantidad As Integer
     Dim Cantidades As ArrayList = New ArrayList()
-    Dim CantidadesNuevas As ArrayList = New ArrayList()
+    Dim IDsProductos As ArrayList = New ArrayList()
+    Dim Correcto = False
 
     Private Sub BorrarCliente_Click(sender As Object, e As EventArgs) Handles BorrarCliente.Click
-        CBO1.Text = ""
-        TXT3.Text = ""
-        TXT4.Text = ""
         TXT5.Text = ""
         TXT6.Text = ""
         TXT7.Text = ""
@@ -28,26 +26,38 @@ Public Class Ventas
         LST3.Items.Clear()
         LST5.Items.Clear()
         Cantidades.Clear()
+        CBO3.Focus()
     End Sub
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'PymeinventariosDataSet.inventarios' Puede moverla o quitarla según sea necesario.
+
+        TXTIDCliente.Hide()
+        TXTIDProducto.Hide()
+        Button1.Enabled = False
+        Guardar_Venta.Enabled = False
+
         Try
-            Conexion.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
-            'Conexion.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
-            Conexion.Open()
+            ConexionVentas.ConnectionString = "server=remotemysql.com; user=8S2KFbGuCG; password='hJgny67Qbs'; database=8S2KFbGuCG"
+            'ConexionVentas.ConnectionString = "server=bynejs3dk0uzuzbn2sur-mysql.services.clever-cloud.com; user=ucv0u4lxjvhpcjog; password='hQ8fhikLVvzPAU6RIkpe'; database=bynejs3dk0uzuzbn2sur"
+            ConexionVentas.Open()
 
             Dim Consulta As String
-            Consulta = "SELECT a.Nombre_Producto, b.Cantidad, b.Precio_Venta FROM Productos a JOIN Producto_Inventario b on a.ID_Producto = b.Productos_ID_Producto"
-            Adaptador = New MySqlDataAdapter(Consulta, Conexion)
+            Consulta = "SELECT a.ID_Producto, a.Nombre_Producto, b.Cantidad, b.Precio_Venta FROM Productos a JOIN Producto_Inventario b on a.ID_Producto = b.Productos_ID_Producto"
+            Adaptador = New MySqlDataAdapter(Consulta, ConexionVentas)
             Datos = New DataSet
             Datos.Tables.Add("Productos")
             Adaptador.Fill(Datos.Tables("Productos"))
             CBO2.DataSource = Datos.Tables("Productos")
             CBO2.ValueMember = "Nombre_Producto"
             ''Dim Fila As DataRow = Datos.Rows(0)
+            TXTIDProducto.DataBindings.Add("Text", Datos.Tables("Productos"), "ID_Producto")
             TXT8.DataBindings.Add("Text", Datos.Tables("Productos"), "Precio_Venta")
             TXT6.DataBindings.Add("Text", Datos.Tables("Productos"), "Cantidad")
+            ConexionVentas.Close()
+
+            Cargar_Datos()
+            Cargar_Numero_Venta()
 
             If TXT6.Text <> "" Or TXT8.Text <> "" Then
                 Dim PrecioVenta = TXT8.Text
@@ -61,9 +71,46 @@ Public Class Ventas
             MsgBox("No Se Puede Conectar Con la Base de Datos - No Se Podrá Registrar la Factura")
             Panel_de_Control.Show()
         End Try
+
         TXT1.Text = Now.Date
-        Num_Factura = Num_Factura + 1
-        TXT2.Text = Num_Factura
+    End Sub
+
+    Private Sub Cargar_Numero_Venta()
+        Try
+            ConexionVentas.Open()
+            Dim Consulta As String
+            Consulta = "SELECT MAX(ID_Venta)+1 FROM Ventas"
+            Adaptador = New MySqlDataAdapter(Consulta, ConexionVentas)
+            Datos = New DataSet
+            Datos.Tables.Add("Ventas")
+            Adaptador.Fill(Datos.Tables("Ventas"))
+            TXT2.DataBindings.Add("Text", Datos.Tables("Ventas"), "MAX(ID_Venta)+1")
+            ConexionVentas.Close()
+        Catch ex As MySqlException
+            Console.Write(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Cargar_Datos()
+        Try
+            ConexionVentas.Open()
+            Dim Consulta As String
+            Consulta = "SELECT a.Nombres, a.Tipo_Documento, a.Numero_ID, b.ID_Cliente 
+                    FROM Persona a JOIN Cliente b 
+                    WHERE a.ID_Persona = b.Persona_ID_Persona"
+            Adaptador = New MySqlDataAdapter(Consulta, ConexionVentas)
+            Datos = New DataSet
+            Datos.Tables.Add("Persona")
+            Adaptador.Fill(Datos.Tables("Persona"))
+            CBO3.DataSource = Datos.Tables("Persona")
+            CBO3.ValueMember = "Nombres"
+            TXT3.DataBindings.Add("Text", Datos.Tables("Persona"), "Numero_ID")
+            TXTtipoID.DataBindings.Add("Text", Datos.Tables("Persona"), "Tipo_Documento")
+            TXTIDCliente.DataBindings.Add("Text", Datos.Tables("Persona"), "ID_Cliente")
+            ConexionVentas.Close()
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
     End Sub
 
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
@@ -75,18 +122,15 @@ Public Class Ventas
 
         Dim Multiplicacion As Double
         Dim CantidadInventario As Integer
+        Dim IDProducto As Integer
         Dim Resultado As Double
         Dim Existe As Boolean = False
-
-
 
         If TXT5.Text <> "" Then
             Cantidad = TXT5.Text
             CantidadInventario = TXT6.Text
-            Cantidades.Add(CantidadInventario)
-            Console.WriteLine(Cantidades)
+            IDProducto = TXTIDProducto.Text
         End If
-
 
         If TXT5.Text = "" Then
             MsgBox("Ingrese la Cantidad", vbExclamation)
@@ -101,9 +145,17 @@ Public Class Ventas
             MsgBox("La cantidad no puede superar a la disponible en el inventario", vbCritical)
             TXT5.Focus()
             Return
-
+        ElseIf Cantidad = 0
+            MsgBox("La cantidad no puede ser 0", vbExclamation)
+            TXT5.Focus()
         Else
             Try
+                Cantidades.Add(CantidadInventario - Cantidad)
+                IDsProductos.Add(IDProducto)
+                For Each Elemento As String In Cantidades
+                    Console.WriteLine(Elemento)
+                Next
+
                 For Each item As String In LST2.Items
                     'Console.WriteLine(LST2.GetItemText(item))
                     If item.Contains(CBO2.Text) Then
@@ -140,7 +192,7 @@ Public Class Ventas
 
             TXT6.Enabled = False
             TXT8.Enabled = False
-
+            Button1.Enabled = True
 
         End If
     End Sub
@@ -153,51 +205,98 @@ Public Class Ventas
         Dim Tamanio As Integer
         Dim Contador As Integer = 0
 
-        If CBO1.Text = "" Or TXT3.Text = "" Or TXT4.Text = "" Then
+        If TXTIDCliente.Text = "" Or TXT9.Text = "" Or TXT11.Text = "" Then
             MsgBox("Ingrese Datos en los Campos Solicitados")
             TXT3.Focus()
+        ElseIf Correcto
+            Insertar_Ventas()
+            LST2.Items.Clear()
+            LST3.Items.Clear()
+            LST5.Items.Clear()
+            Guardar_Venta.Enabled = False
+            Correcto = False
+        Else
+            MsgBox("Datos erroneaos, no se puede registrar la venta", vbExclamation)
         End If
+    End Sub
 
-        Tamanio = LST3.Items.Count()
+    Private Sub Insertar_Ventas()
+        Dim FormatoFecha As Date
+        Dim NuevaFecha As Date
+        Try
+            ConexionVentas.Open()
+            Proceso = New MySqlCommand("INSERT INTO Ventas(Fecha_Venta, Valor_Total, Cliente_ID_Cliente)
+                                        VALUES(@Fecha_Venta, @Valor_Total, @Cliente_ID_Cliente)", ConexionVentas)
+            FormatoFecha = TXT1.Text
+            NuevaFecha = Format(FormatoFecha, "yyyy/MM/dd")
+            Proceso.Parameters.AddWithValue("@Fecha_Venta", NuevaFecha)
+            Proceso.Parameters.AddWithValue("@Valor_Total", TXT11.Text)
+            Proceso.Parameters.AddWithValue("@Cliente_ID_Cliente", TXTIDCliente.Text)
+            Proceso.ExecuteNonQuery()
+            ConexionVentas.Close()
+            Insertar_Venta_Producto()
 
-        For Each item As Object In LST3.Items
-            Contador = Contador + 1
-            For Each Elemento In Cantidades
-                Elemento = Elemento - Convert.ToInt32(item)
-                If Contador = Tamanio Then
-                    CantidadesNuevas.Add(Elemento)
-                    Exit For
-                End If
+            MsgBox("Venta Registrada")
+        Catch ex As MySqlException
+            MsgBox("Error al Registrar los Datos en Ventas")
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Insertar_Venta_Producto()
+        Try
+            ConexionVentas.Open()
+            Proceso = New MySqlCommand("INSERT INTO Venta_Producto(Cantidad_Productos, Precio, Productos_ID_Producto, Ventas_ID_Venta)
+                                        VALUES(@Cantidad_Productos, @Precio, @Productos_ID_Producto, @Ventas_ID_Venta)", ConexionVentas)
+
+            Dim i As Integer = 0
+            For Each item As String In LST3.Items
+                'Console.WriteLine(LST2.GetItemText(item))
+                'Console.WriteLine(Convert.ToString(Cantidades(i)))
+                'Console.WriteLine(LST5.Items(i))
+                Proceso.Parameters.Clear()
+                Proceso.Parameters.AddWithValue("@Cantidad_Productos", LST3.Items(i))
+                Proceso.Parameters.AddWithValue("@Precio", LST5.Items(i))
+                Proceso.Parameters.AddWithValue("@Productos_ID_Producto", IDsProductos(i))
+                Proceso.Parameters.AddWithValue("@Ventas_ID_Venta", TXT2.Text)
+                Proceso.ExecuteNonQuery()
+
+                i = i + 1
             Next
+            ConexionVentas.Close()
 
-        Next
-        For Each Elemento2 As String In CantidadesNuevas
-            Console.WriteLine(Elemento2)
-        Next
+            Actualizar_Inventario()
 
-        'If TXT6.Text <> "" Then
-        'Cantidad_Actual = TXT6.Text
-        'Cantidad_Nueva = Cantidad_Actual - Cantidad
-        'Console.WriteLine(Cantidad_Nueva.ToString)
-        'End If
+            'MsgBox("Venta Registrada")
+        Catch ex As MySqlException
+            MsgBox("Error al Registrar los Datos en Venta Productos")
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
 
+    Private Sub Actualizar_Inventario()
+        Try
+            ConexionVentas.Open()
 
+            Dim i As Integer = 0
+            For Each item As String In LST3.Items
+                'Console.WriteLine(LST2.GetItemText(item))
+                'Console.WriteLine(Convert.ToString(Cantidades(i)))
+                'Console.WriteLine(LST5.Items(i))
 
+                'Dim cantidad As Integer =
+                'Dim ID_Producto As Integer = 
+                Proceso = New MySqlCommand("UPDATE Producto_Inventario SET Cantidad =" & Cantidades(i) & " WHERE Productos_ID_Producto =" & IDsProductos(i) & "", ConexionVentas)
+                Proceso.ExecuteNonQuery()
+                i = i + 1
+            Next
+            ConexionVentas.Close()
 
-        'Try
-        ' Proceso = New MySqlCommand("Insert Into Facturacion(Fecha_Factura, Numero_Factura, Nombre_Cliente, Tipo_Identificacion, Numero_Identificacion)" & Chr(13) & "Values(@Fecha_Factura, @Numero_Factura, @Nombre_Cliente, @Tipo_Identificacion, @Numero_Identificacion)", Conexion)
-        'Proceso.Parameters.AddWithValue("@Fecha_Factura", TXT1.Text)
-        'Proceso.Parameters.AddWithValue("@Numero_Factura", TXT8.Text)
-        'Proceso.Parameters.AddWithValue("@Nombre_Cliente", TXT3.Text)
-        'Proceso.Parameters.AddWithValue("@Tipo_Identificacion", CBO1.Text)
-        'Proceso.Parameters.AddWithValue("@Numero_Identificacion", TXT2.Text)
-        'Proceso.ExecuteNonQuery()
-        'TXT1.Focus()
-        'MsgBox("Datos Registrados")
-        'Catch ex As Exception
-        'MsgBox("Error al Registrar los Datos")
-        'End Try
-
+            'MsgBox("Venta Registrada")
+        Catch ex As MySqlException
+            MsgBox("Error al Actualizar los Datos en Inventario")
+            Console.WriteLine(ex.Message)
+        End Try
     End Sub
 
     Private Sub LST3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LST3.SelectedIndexChanged
@@ -230,19 +329,18 @@ Public Class Ventas
         If TXT9.Text = "" Then
             MsgBox("Inserte el Monto Recibido", vbEmpty)
             TXT9.Focus()
+
         ElseIf Monto > Costo Then
-
-
             MontoRecibido = TXT9.Text
             Cambio = MontoRecibido - Total
             TXT10.Text = Cambio.ToString()
+            Button1.Enabled = False
+            Correcto = True
+            Guardar_Venta.Enabled = True
         Else
             MsgBox("El Monto Recibido debe ser mayor al total de la venta", vbExclamation)
         End If
 
-        For Each Elemento As String In Cantidades
-            Console.WriteLine(Elemento)
-        Next
 
     End Sub
 
@@ -262,5 +360,9 @@ Public Class Ventas
 
         TXT6.Enabled = True
         TXT8.Enabled = True
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Clientes.Show()
     End Sub
 End Class

@@ -26,12 +26,10 @@ Partial Class Ventas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventas))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CBO1 = New System.Windows.Forms.ComboBox()
         Me.TXT3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TXT1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TXT4 = New System.Windows.Forms.TextBox()
         Me.BorrarCliente = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -70,6 +68,11 @@ Partial Class Ventas
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TXT7 = New System.Windows.Forms.TextBox()
         Me.TXT8 = New System.Windows.Forms.TextBox()
+        Me.CBO3 = New System.Windows.Forms.ComboBox()
+        Me.TXTtipoID = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TXTIDCliente = New System.Windows.Forms.TextBox()
+        Me.TXTIDProducto = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -90,26 +93,18 @@ Partial Class Ventas
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(5, 111)
+        Me.Label3.Location = New System.Drawing.Point(24, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Tipo Identificación"
         '
-        'CBO1
-        '
-        Me.CBO1.FormattingEnabled = True
-        Me.CBO1.Items.AddRange(New Object() {"Cédula de Ciudadanía", "NIT", "Cédula de Extranjería", "Pasaporte"})
-        Me.CBO1.Location = New System.Drawing.Point(128, 109)
-        Me.CBO1.Name = "CBO1"
-        Me.CBO1.Size = New System.Drawing.Size(158, 21)
-        Me.CBO1.TabIndex = 3
-        Me.CBO1.Text = "Seleccione"
-        '
         'TXT3
         '
+        Me.TXT3.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TXT3.Location = New System.Drawing.Point(445, 110)
         Me.TXT3.Name = "TXT3"
+        Me.TXT3.ReadOnly = True
         Me.TXT3.Size = New System.Drawing.Size(145, 20)
         Me.TXT3.TabIndex = 4
         '
@@ -139,18 +134,11 @@ Partial Class Ventas
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(12, 150)
+        Me.Label5.Location = New System.Drawing.Point(24, 111)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 16)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Nombre del Cliente"
-        '
-        'TXT4
-        '
-        Me.TXT4.Location = New System.Drawing.Point(141, 149)
-        Me.TXT4.Name = "TXT4"
-        Me.TXT4.Size = New System.Drawing.Size(186, 20)
-        Me.TXT4.TabIndex = 7
         '
         'BorrarCliente
         '
@@ -529,11 +517,61 @@ Partial Class Ventas
         Me.TXT8.Size = New System.Drawing.Size(88, 20)
         Me.TXT8.TabIndex = 43
         '
+        'CBO3
+        '
+        Me.CBO3.FormattingEnabled = True
+        Me.CBO3.Location = New System.Drawing.Point(147, 110)
+        Me.CBO3.Name = "CBO3"
+        Me.CBO3.Size = New System.Drawing.Size(139, 21)
+        Me.CBO3.TabIndex = 44
+        Me.CBO3.Text = "Seleccione"
+        '
+        'TXTtipoID
+        '
+        Me.TXTtipoID.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TXTtipoID.Location = New System.Drawing.Point(147, 144)
+        Me.TXTtipoID.Name = "TXTtipoID"
+        Me.TXTtipoID.ReadOnly = True
+        Me.TXTtipoID.Size = New System.Drawing.Size(139, 20)
+        Me.TXTtipoID.TabIndex = 45
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(491, 145)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 32)
+        Me.Button2.TabIndex = 53
+        Me.Button2.Text = "¿Cliente Nuevo?"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TXTIDCliente
+        '
+        Me.TXTIDCliente.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TXTIDCliente.Location = New System.Drawing.Point(305, 145)
+        Me.TXTIDCliente.Name = "TXTIDCliente"
+        Me.TXTIDCliente.ReadOnly = True
+        Me.TXTIDCliente.Size = New System.Drawing.Size(134, 20)
+        Me.TXTIDCliente.TabIndex = 54
+        '
+        'TXTIDProducto
+        '
+        Me.TXTIDProducto.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TXTIDProducto.Location = New System.Drawing.Point(404, 231)
+        Me.TXTIDProducto.Name = "TXTIDProducto"
+        Me.TXTIDProducto.ReadOnly = True
+        Me.TXTIDProducto.Size = New System.Drawing.Size(60, 20)
+        Me.TXTIDProducto.TabIndex = 55
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 630)
+        Me.Controls.Add(Me.TXTIDProducto)
+        Me.Controls.Add(Me.TXTIDCliente)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.TXTtipoID)
+        Me.Controls.Add(Me.CBO3)
         Me.Controls.Add(Me.TXT8)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.TXT7)
@@ -556,11 +594,9 @@ Partial Class Ventas
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BorrarCliente)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TXT4)
         Me.Controls.Add(Me.TXT1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TXT3)
-        Me.Controls.Add(Me.CBO1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.MenuStrip1)
@@ -579,12 +615,10 @@ Partial Class Ventas
     End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents CBO1 As ComboBox
     Friend WithEvents TXT3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TXT1 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TXT4 As TextBox
     Friend WithEvents BorrarCliente As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
@@ -623,4 +657,9 @@ Partial Class Ventas
     Friend WithEvents TXT7 As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents TXT5 As TextBox
+    Friend WithEvents CBO3 As ComboBox
+    Friend WithEvents TXTtipoID As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TXTIDCliente As TextBox
+    Friend WithEvents TXTIDProducto As TextBox
 End Class

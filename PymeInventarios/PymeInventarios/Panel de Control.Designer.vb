@@ -120,7 +120,7 @@ Partial Class Panel_de_Control
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 84)
         Me.Button7.TabIndex = 8
-        Me.Button7.Text = "Registrar Egresos"
+        Me.Button7.Text = "Egresos"
         Me.Button7.UseVisualStyleBackColor = False
         '
         'Button8
@@ -148,7 +148,7 @@ Partial Class Panel_de_Control
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(130, 84)
         Me.Button9.TabIndex = 10
-        Me.Button9.Text = "Crear Clientes"
+        Me.Button9.Text = "Clientes"
         Me.Button9.UseVisualStyleBackColor = False
         '
         'MenuStrip1
